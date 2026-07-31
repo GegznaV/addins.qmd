@@ -8,7 +8,7 @@
 \alias{qmd_table_style_multiline_no_colnames}
 \alias{qmd_table_style_simple}
 \alias{qmd_table_style_grid}
-\title{Insert R Markdown tables}
+\title{Insert Quarto/Pandoc Markdown tables}
 \usage{
 qmd_table_style_md(context = rs_get_context())
 
@@ -27,5 +27,5 @@ qmd_table_style_grid(context = rs_get_context())
 Object with context of active RStudio document.}
 }
 \description{
-Insert examples of R Markdown tables.
+Insert examples of Quarto/Pandoc Markdown tables.
 }

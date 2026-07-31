@@ -42,9 +42,9 @@ These functions internally use function
 that adds lines above and below the selection.
 }
 \seealso{
-Other R Markdown formatting add-ins: 
+Other Quarto formatting add-ins: 
 \code{\link{format_rmd}},
 \code{\link{qmd_equations}},
 \code{\link{qmd_list}()}
 }
-\concept{R Markdown formatting add-ins}
+\concept{Quarto formatting add-ins}

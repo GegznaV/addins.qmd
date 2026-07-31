@@ -21,12 +21,12 @@ Object with context of active RStudio document.}
 Select a piece of text with a cursor and call these functions as an add-in
 to enclose the text with special symbols. Text between \verb{$.$} is
 interpreted as an inline equation and between \verb{$$.$$} or \verb{\[.\]}
-as a block equation in R Markdown.
+as a block equation in Quarto/Pandoc Markdown.
 }
 \seealso{
-Other R Markdown formatting add-ins: 
+Other Quarto formatting add-ins: 
 \code{\link{format_rmd}},
 \code{\link{qmd_code_block}()},
 \code{\link{qmd_list}()}
 }
-\concept{R Markdown formatting add-ins}
+\concept{Quarto formatting add-ins}

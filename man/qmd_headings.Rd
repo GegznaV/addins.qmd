@@ -11,7 +11,7 @@
 \alias{qmd_heading_1_title}
 \alias{qmd_heading_2_subtitle}
 \alias{qmd_heading_remove}
-\title{Format text as R Markdown headings.}
+\title{Format text as Quarto/Pandoc Markdown headings.}
 \usage{
 qmd_heading_1(context = rs_get_context())
 
@@ -47,7 +47,7 @@ removes it, otherwise removes hash-style.
 }}
 }
 \description{
-RStudio add-ins to format text as R Markdown headings and to remove this formatting.
+RStudio add-ins to format text as Quarto/Pandoc Markdown headings and to remove this formatting.
 }
 \details{
 Function \code{qmd_heading_remove()} removes heading formatting:

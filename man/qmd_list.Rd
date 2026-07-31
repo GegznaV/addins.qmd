@@ -11,7 +11,7 @@
 \alias{qmd_list_lettered}
 \alias{qmd_list_lettered_2}
 \alias{qmd_list_z_example_list}
-\title{Format text as R Markdown list.}
+\title{Format text as Quarto/Pandoc Markdown list.}
 \usage{
 qmd_list(type = "unordered", level = 1, context = rs_get_context())
 
@@ -42,7 +42,7 @@ qmd_list_z_example_list()
 Object with context of active RStudio document.}
 }
 \description{
-RStudio add-ins which formats text as R Markdown lists.
+RStudio add-ins which format text as Quarto/Pandoc Markdown lists.
 For the first-level lists: \itemize{
 \item \code{qmd_list()} - the main function, that make lists;
 \item \code{qmd_unordered_list()} - unordered list;
@@ -52,9 +52,9 @@ For the first-level lists: \itemize{
 }
 }
 \seealso{
-Other R Markdown formatting add-ins: 
+Other Quarto formatting add-ins: 
 \code{\link{format_rmd}},
 \code{\link{qmd_code_block}()},
 \code{\link{qmd_equations}}
 }
-\concept{R Markdown formatting add-ins}
+\concept{Quarto formatting add-ins}

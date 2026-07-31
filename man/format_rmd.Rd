@@ -25,7 +25,7 @@
 \alias{qmd_symbol_dollar}
 \alias{qmd_symbol_en_dash}
 \alias{qmd_symbol_em_dash}
-\title{Add-ins for basic R Markdown formatting.}
+\title{Add-ins for basic Quarto/Pandoc Markdown formatting.}
 \usage{
 qmd_format_bold(context = rs_get_context())
 
@@ -79,19 +79,19 @@ Object with context of active RStudio document.}
 }
 \description{
 RStudio add-ins, which enclose selected text with symbols that have special
-interpretation in R Markdown.
+interpretation in Quarto/Pandoc Markdown.
 }
 \seealso{
 https://pandoc.org/MANUAL.html#backslash-escapes
 
-Other R Markdown formatting add-ins: 
+Other Quarto formatting add-ins: 
 \code{\link{qmd_code_block}()},
 \code{\link{qmd_equations}},
 \code{\link{qmd_list}()}
 
-Other R Markdown formatting add-ins: 
+Other Quarto formatting add-ins: 
 \code{\link{qmd_code_block}()},
 \code{\link{qmd_equations}},
 \code{\link{qmd_list}()}
 }
-\concept{R Markdown formatting add-ins}
+\concept{Quarto formatting add-ins}
