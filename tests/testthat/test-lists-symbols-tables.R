@@ -23,11 +23,36 @@ test_that("symbol helpers insert escaped symbols with no spaces", {
   expect_true(all(vapply(calls, function(x) identical(x$spaces, FALSE), logical(1))))
 })
 
-test_that("qmd_list warns and returns in visual editor mode", {
+test_that("qmd_list uses ordered-list command in visual editor mode", {
+  warning_call <- FALSE
+
+  local_mocked_bindings(
+    is_visual_editor = function() TRUE,
+    run_visual_editor_command = function(command) {
+      expect_identical(command, "markdownOrderedList")
+      TRUE
+    },
+    .package = "addins.qmd"
+  )
+
+  local_mocked_bindings(
+    sendToConsole = function(code, execute, focus) {
+      warning_call <<- TRUE
+      invisible(NULL)
+    },
+    .package = "rstudioapi"
+  )
+
+  expect_null(qmd_list(type = "numbered", level = 1, context = list()))
+  expect_false(warning_call)
+})
+
+test_that("qmd_list warns when visual editor command is unavailable", {
   warning_call <- NULL
 
   local_mocked_bindings(
     is_visual_editor = function() TRUE,
+    run_visual_editor_command = function(command) FALSE,
     .package = "addins.qmd"
   )
 
@@ -149,6 +174,35 @@ test_that("qmd_remove_list strips list markup and updates selected range", {
   expect_identical(modified$id, "doc-id")
   expect_identical(modified$text, "item one\nitem two")
   expect_true(selected)
+})
+
+test_that("qmd_remove_list strips stacked list markers in one pass", {
+  context <- list(id = "doc-id")
+  modified <- NULL
+
+  local_mocked_bindings(
+    rs_get_selected_rows = function(context) {
+      x <- c("- 1. item one", "- 2.", "> 3) item three")
+      attr(x, "row_numbers") <- c(8, 10)
+      x
+    },
+    rs_select_all_selected_rows = function(context) invisible(NULL),
+    .package = "addins.qmd"
+  )
+
+  local_mocked_bindings(
+    document_range = function(start, end) list(start = start, end = end),
+    modifyRange = function(location, text, id) {
+      modified <<- list(location = location, text = text, id = id)
+      invisible(NULL)
+    },
+    .package = "rstudioapi"
+  )
+
+  qmd_remove_list(context = context)
+
+  expect_identical(modified$id, "doc-id")
+  expect_identical(modified$text, "item one\n\nitem three")
 })
 
 test_that("qmd_remove_list keeps selection when no replacement is needed", {
