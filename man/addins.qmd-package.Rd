@@ -4,14 +4,14 @@
 \name{addins.qmd-package}
 \alias{addins.qmd}
 \alias{addins.qmd-package}
-\title{addins.qmd: RStudio Add-ins to Format R Markdown Documents}
+\title{addins.qmd: RStudio Add-ins for Quarto Documents}
 \description{
-Package `addins.qmd` contains RStudio add-ins to format R Markdown documents. The main purpose of this package is to help begginers to learn R Markwown syntax faster. As well as to create possibility to use keyboard shortcuts for the most common R Markdown syntax elements.
+Package `addins.qmd` contains RStudio add-ins to format Quarto documents. The main purpose of this package is to help beginners learn Quarto and Pandoc Markdown syntax faster and use keyboard shortcuts for common authoring elements.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{http://gegznav.github.io/addins.qmd/}
+  \item \url{https://gegznav.github.io/addins.qmd/}
   \item Report bugs at \url{https://github.com/GegznaV/addins.qmd/issues}
 }
 
