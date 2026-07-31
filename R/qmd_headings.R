@@ -27,7 +27,10 @@
 #' @export
 qmd_heading_1 <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    return()
+    if (run_visual_editor_command("markdownHeader1")) {
+      return(invisible(NULL))
+    }
+    return(invisible(NULL))
   } else {
     add_hash_style_heading("# ", context = context)
   }
@@ -38,7 +41,10 @@ qmd_heading_1 <- function(context = rs_get_context()) {
 #' @export
 qmd_heading_2 <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    return()
+    if (run_visual_editor_command("markdownHeader2")) {
+      return(invisible(NULL))
+    }
+    return(invisible(NULL))
   } else {
     add_hash_style_heading("## ", context = context)
   }
@@ -48,7 +54,10 @@ qmd_heading_2 <- function(context = rs_get_context()) {
 #' @export
 qmd_heading_3 <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    return()
+    if (run_visual_editor_command("markdownHeader3")) {
+      return(invisible(NULL))
+    }
+    return(invisible(NULL))
   } else {
     add_hash_style_heading("### ", context = context)
   }
@@ -58,7 +67,10 @@ qmd_heading_3 <- function(context = rs_get_context()) {
 #' @export
 qmd_heading_4 <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    return()
+    if (run_visual_editor_command("markdownHeader4")) {
+      return(invisible(NULL))
+    }
+    return(invisible(NULL))
   } else {
     add_hash_style_heading("#### ", context = context)
   }
@@ -68,7 +80,10 @@ qmd_heading_4 <- function(context = rs_get_context()) {
 #' @export
 qmd_heading_5 <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    return()
+    if (run_visual_editor_command("markdownHeader5")) {
+      return(invisible(NULL))
+    }
+    return(invisible(NULL))
   } else {
     add_hash_style_heading("##### ", context = context)
   }
@@ -78,7 +93,10 @@ qmd_heading_5 <- function(context = rs_get_context()) {
 #' @export
 qmd_heading_6 <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    return()
+    if (run_visual_editor_command("markdownHeader6")) {
+      return(invisible(NULL))
+    }
+    return(invisible(NULL))
   } else {
     add_hash_style_heading("###### ", context = context)
   }
