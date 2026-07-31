@@ -1,18 +1,17 @@
 Package: addins.qmd
 Type: Package
-Title: RStudio Add-ins to Format R Markdown Documents
+Title: RStudio Add-ins for Quarto Documents
 Version: 0.0.1
 Date: 2022-08-03  
 Authors@R: person("Vilmantas", "Gegzna",
                   email = "GegznaV@gmail.com",
                   role = c("aut", "cre","cph")
             )
-Description: Package `addins.qmd` contains RStudio add-ins to format R Markdown
-             documents. The main purpose of this package is to help begginers
-             to learn R Markwown syntax faster. As well as to create possibility
-             to use keyboard shortcuts for the most common R Markdown syntax
-             elements.
-URL: http://gegznav.github.io/addins.qmd/
+Description: Package `addins.qmd` contains RStudio add-ins to format Quarto
+             documents. The main purpose of this package is to help beginners
+             learn Quarto and Pandoc Markdown syntax faster and use keyboard
+             shortcuts for common authoring elements.
+URL: https://gegznav.github.io/addins.qmd/
 BugReports: https://github.com/GegznaV/addins.qmd/issues
 License: MIT + file LICENSE
 LazyData: TRUE
@@ -24,7 +23,7 @@ Remotes:
 Additional_repositories:
     https://mokymai.github.io/download/
 Depends:
-    R (>= 3.2),
+    R (>= 4.1),
     addin.tools (>= 0.0.10)
 Imports:
     crayon,
@@ -33,6 +32,6 @@ Imports:
     purrr
 Suggests:
     knitr,
-    rmarkdown
+    quarto
 Roxygen: list(markdown = TRUE)
 Config/roxygen2/version: 8.0.0
