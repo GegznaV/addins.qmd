@@ -14,39 +14,16 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
+[![CRAN_Status](https://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
 [![GitHub version](https://img.shields.io/badge/GitHub-`r read.dcf('DESCRIPTION')[1, 'Version']`-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
 <!-- badges: end -->
 
 ***
 
-
-<!-- 
-```{r, fig.align='center', out.height='30%', out.width='30%', echo=FALSE, eval = FALSE}
-# knitr::include_graphics("http://gegznav.github.io/addins.qmd/logo.png")
-``` 
--->
-
-
-<img src="https://gegznav.github.io/addins.qmd/logo.png" alt="addins.qmd logo" align="right" width="15%" height="15%"/>
-
-
-# R package **addins.qmd**  
+# R package **addins.qmd** <img src="man/figures/logo.png" align="right" height="136" alt="" />
 
 Package `addins.qmd` is an *R* package that provides a set of *RStudio* add-ins for *Quarto* documents. The main purpose of this package is to make learning Quarto and Pandoc Markdown syntax faster.
-
-<!-- 
-
-1) **format text in Quarto documents**:
-  - **enclose** either selected text or selected rows with special symbols and text gets interpreted in a special way when rendered with Quarto/Pandoc Markdown (e.g., converts "bold" into "\*\*bold\*\*"
-that is interpreted as "**bold**").
-2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position;
-3)  **replace** symbols in selected
-pieces of text (e.g., convert backslashes to forward slashes which results
-in strings like `"c:\data\"` converted into `"c:/data/"`).
-
--->
 
 
 ## Install Package
@@ -76,19 +53,6 @@ remotes::install_github("GegznaV/addins.qmd")
 
 
 # How to Use These Add-ins
-
-<!-- 
-Recommended workflow and a few examples
------------------------------------------------------
-
-Get started online http://gegznav.github.io/addins.qmd/articles/v1_workflow.html
-
-And offline:
-```{r, eval=FALSE}
-vignette("v1_workflow", package = "addins.qmd")
-```
-browseVignettes("addins.qmd") 
--->
 
 
 For the current version of the package:
