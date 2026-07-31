@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 [![CRAN_Status](https://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
 [![GitHub version](https://img.shields.io/badge/GitHub-`r read.dcf('DESCRIPTION')[1, 'Version']`-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 ***
