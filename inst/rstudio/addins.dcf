@@ -283,12 +283,12 @@ Binding: qmd_table_style_simple
 Interactive: false
 
 Name: {qmd} Table: markdown style 1 (example)
-Description: Insert an example of R Markdown table.
+Description: Insert an example of Quarto/Pandoc markdown table.
 Binding: qmd_table_style_md
 Interactive: false
 
 Name: {qmd} Table: markdown style 2 (example)
-Description: Insert an example of R Markdown table.
+Description: Insert an example of Quarto/Pandoc markdown table.
 Binding: qmd_table_style_md_alternative
 Interactive: false
 
