@@ -38,13 +38,13 @@ interpreted as chunk options, otherwise as chunk contents.
 \code{qmd_code_block_r_split()} - splits block of R code.
 
 These functions internally use function
-\code{\link[addin.tools:rs_enclose_with_lines]{addin.tools::rs_enclose_selected_rows_with()}} -
+\code{\link[addin.tools:rs_enclose_selected_rows_with]{addin.tools::rs_enclose_selected_rows_with()}} -
 that adds lines above and below the selection.
 }
 \seealso{
-Other Quarto formatting add-ins: 
+Other Quarto formatting add-ins:
 \code{\link{format_rmd}},
 \code{\link{qmd_equations}},
-\code{\link{qmd_list}()}
+\code{\link[=qmd_list]{qmd_list()}}
 }
 \concept{Quarto formatting add-ins}

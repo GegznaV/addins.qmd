@@ -84,14 +84,9 @@ interpretation in Quarto/Pandoc Markdown.
 \seealso{
 https://pandoc.org/MANUAL.html#backslash-escapes
 
-Other Quarto formatting add-ins: 
-\code{\link{qmd_code_block}()},
+Other Quarto formatting add-ins:
+\code{\link[=qmd_code_block]{qmd_code_block()}},
 \code{\link{qmd_equations}},
-\code{\link{qmd_list}()}
-
-Other Quarto formatting add-ins: 
-\code{\link{qmd_code_block}()},
-\code{\link{qmd_equations}},
-\code{\link{qmd_list}()}
+\code{\link[=qmd_list]{qmd_list()}}
 }
 \concept{Quarto formatting add-ins}
