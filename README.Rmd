@@ -14,10 +14,9 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
-[![GitHub version](https://img.shields.io/badge/GitHub-`r packageVersion("addins.qmd")`-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
+[![GitHub version](https://img.shields.io/badge/GitHub-`r read.dcf('DESCRIPTION')[1, 'Version']`-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 ***
@@ -30,7 +29,7 @@ knitr::opts_chunk$set(
 -->
 
 
-<img src="https://gegznav.github.io/addins.qmd/logo.png" align="right" width="15%" height="15%"/>
+<img src="https://gegznav.github.io/addins.qmd/logo.png" alt="addins.qmd logo" align="right" width="15%" height="15%"/>
 
 
 # R package **addins.qmd**  
@@ -112,7 +111,7 @@ Below you can find a few examples how to use the add-ins of the package.
 ```{r fig-ID-1, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION <- "**Fig. 2.** **Demonstration 1: headings.**
 Place a cursor with a mouse and use a necessary add-in.
-*(In this demonstrations, older version of the package is used.)*"
+*(In this demonstration, older version of the package is used.)*"
 
 knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-headings-1.gif")
 ```
@@ -131,7 +130,7 @@ knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-headings
 ```{r fig-ID-3, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION <- "**Fig. 4.** **Demonstration 3: basic formatting.**
 Before using this type of add-in, select a piece of text that should be formatted.
-*(In this demonstrations, older version of the package is used.)*  "
+*(In this demonstration, older version of the package is used.)*  "
 
 knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-formatting-1.gif")
 ```
@@ -143,7 +142,7 @@ knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-formatti
 CAPTION <- "**Fig. 5.** **Demonstration 4: lists.**
 The lists can be numbered and unnumbered.
 They can have several levels.
-*(In this demonstrations, older version of the package is used.)*  "
+*(In this demonstration, older version of the package is used.)*  "
 
 knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-lists-1.gif")
 ```
@@ -164,6 +163,13 @@ This package is Quarto-first. Most add-ins produce syntax that works in Quarto d
 
 Some add-ins have limited behavior in RStudio Markdown Visual Editor mode. When this happens, use Source editor mode or the related native Visual Editor command.
 
+## API Surface Conventions
+
+- Exported functions with the `qmd_` prefix are the supported user-facing addins.
+- Some addin bindings intentionally target non-exported functions for RStudio addin dispatch compatibility.
+- Non-exported helper functions are internal and may change between releases.
+- Visual Editor command support is implemented incrementally and falls back to source-mode behavior or warnings when commands are unavailable.
+
 
 # See Also
 
@@ -172,7 +178,7 @@ and especially how to use them in combination with user-defined
 keyboard shortcuts:
 
 1. [RStudio add-ins](https://rstudio.github.io/rstudioaddins/);
-2. [Keyboard shortcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts);
+2. [Keyboard shortcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shortcuts);
 3. [Customizing keyboard shortcuts.](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts)
 
 
