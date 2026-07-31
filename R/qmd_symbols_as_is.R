@@ -14,7 +14,7 @@
 #'
 #' @inheritParams addin.tools::rs_get_index
 #'
-#' @family R Markdown formatting add-ins
+#' @family Quarto formatting add-ins
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
