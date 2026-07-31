@@ -6,13 +6,13 @@
 #' Select a piece of text with a cursor and call these functions as an add-in
 #' to enclose the text with special symbols. Text between `$.$` is
 #' interpreted as an inline equation and between `$$.$$` or `\[.\]`
-#' as a block equation in R Markdown.
+#' as a block equation in Quarto/Pandoc Markdown.
 #'
 #' @name qmd_equations
 #'
 #' @inheritParams addin.tools::rs_get_index
 #'
-#' @family R Markdown formatting add-ins
+#' @family Quarto formatting add-ins
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
