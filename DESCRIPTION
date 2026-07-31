@@ -7,6 +7,8 @@ Authors@R: person("Vilmantas", "Gegzna",
                   email = "GegznaV@gmail.com",
                   role = c("aut", "cre", "cph")
             )
+Author: Vilmantas Gegzna [aut, cre, cph]
+Maintainer: Vilmantas Gegzna <GegznaV@gmail.com>
 Description: Package `addins.qmd` contains RStudio add-ins to format Quarto
              documents. The main purpose of this package is to help beginners
              learn Quarto and Pandoc Markdown syntax faster and use keyboard
