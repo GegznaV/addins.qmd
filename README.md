@@ -4,11 +4,10 @@
 
 [![MIT
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
 [![GitHub
 version](https://img.shields.io/badge/GitHub-0.0.1-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2026--07--31-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 ------------------------------------------------------------------------
@@ -17,7 +16,7 @@ version](https://img.shields.io/badge/GitHub-0.0.1-brightgreen.svg)](https://git
 
 -->
 
-<img src="https://gegznav.github.io/addins.qmd/logo.png" align="right" width="15%" height="15%"/>
+<img src="https://gegznav.github.io/addins.qmd/logo.png" alt="addins.qmd logo" align="right" width="15%" height="15%"/>
 
 # R package **addins.qmd**
 
@@ -104,10 +103,10 @@ Below you can find a few examples how to use the add-ins of the package.
 
 <img src="https://gegznav.github.io/addins.qmd/figs/demo-headings-1.gif" alt="**Fig. 2.** **Demonstration 1: headings.**
 Place a cursor with a mouse and use a necessary add-in.
-*(In this demonstrations, older version of the package is used.)*" width="600" />
+*(In this demonstration, older version of the package is used.)*" width="600" />
 <p class="caption">
 **Fig. 2.** **Demonstration 1: headings.** Place a cursor with a mouse
-and use a necessary add-in. *(In this demonstrations, older version of
+and use a necessary add-in. *(In this demonstration, older version of
 the package is used.)*
 </p>
 
@@ -131,11 +130,11 @@ blank line above the selection is added.
 
 <img src="https://gegznav.github.io/addins.qmd/figs/demo-formatting-1.gif" alt="**Fig. 4.** **Demonstration 3: basic formatting.**
 Before using this type of add-in, select a piece of text that should be formatted.
-*(In this demonstrations, older version of the package is used.)*  " width="600" />
+*(In this demonstration, older version of the package is used.)*  " width="600" />
 <p class="caption">
 **Fig. 4.** **Demonstration 3: basic formatting.** Before using this
 type of add-in, select a piece of text that should be formatted. *(In
-this demonstrations, older version of the package is used.)*
+this demonstration, older version of the package is used.)*
 </p>
 
 </div>
@@ -147,11 +146,11 @@ this demonstrations, older version of the package is used.)*
 <img src="https://gegznav.github.io/addins.qmd/figs/demo-lists-1.gif" alt="**Fig. 5.** **Demonstration 4: lists.**
 The lists can be numbered and unnumbered.
 They can have several levels.
-*(In this demonstrations, older version of the package is used.)*  " width="600" />
+*(In this demonstration, older version of the package is used.)*  " width="600" />
 <p class="caption">
 **Fig. 5.** **Demonstration 4: lists.** The lists can be numbered and
-unnumbered. They can have several levels. *(In this demonstrations,
-older version of the package is used.)*
+unnumbered. They can have several levels. *(In this demonstration, older
+version of the package is used.)*
 </p>
 
 </div>
@@ -179,6 +178,18 @@ Some add-ins have limited behavior in RStudio Markdown Visual Editor
 mode. When this happens, use Source editor mode or the related native
 Visual Editor command.
 
+## API Surface Conventions
+
+-   Exported functions with the `qmd_` prefix are the supported
+    user-facing addins.
+-   Some addin bindings intentionally target non-exported functions for
+    RStudio addin dispatch compatibility.
+-   Non-exported helper functions are internal and may change between
+    releases.
+-   Visual Editor command support is implemented incrementally and falls
+    back to source-mode behavior or warnings when commands are
+    unavailable.
+
 # See Also
 
 Use the links below to learn more about RStudio add-ins and especially
@@ -186,7 +197,7 @@ how to use them in combination with user-defined keyboard shortcuts:
 
 1.  [RStudio add-ins](https://rstudio.github.io/rstudioaddins/);
 2.  [Keyboard
-    shortcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts);
+    shortcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shortcuts);
 3.  [Customizing keyboard
     shortcuts.](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts)
 
