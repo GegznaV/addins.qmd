@@ -4,6 +4,7 @@
 ^\.Rproj\.user$
 ^\.travis\.yml$
 ^README\.Rmd$
+^README\.html$
 ^README-.*\.png$
 ^data-raw$
 ^_pkgdown.yaml
@@ -14,3 +15,6 @@
 ^_tmp$
 ^\.github$
 ^pkgdown-assets$
+^ai-context\.qmd$
+^\.lintr$
+^codecov\.yml$

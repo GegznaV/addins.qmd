@@ -1,308 +1,308 @@
-Name: {Rmd} Bold (** **)
+Name: {qmd} Bold (** **)
 Description: Enclose selected text with `**` and `**`.
-Binding: rmd_format_bold
+Binding: qmd_format_bold
 Interactive: false
 
-Name: {Rmd} Bold (__ __)
+Name: {qmd} Bold (__ __)
 Description: Enclose selected text with `__` and `__`.
-Binding: rmd_format_bold2
+Binding: qmd_format_bold2
 Interactive: false
 
-Name: {Rmd} Bold italics (**_ _**)
+Name: {qmd} Bold italics (**_ _**)
 Description: Enclose selected text with `**_` and `_**`.
-Binding: rmd_format_bold_italics
+Binding: qmd_format_bold_italics
 Interactive: false
 
-Name: {Rmd} Italics (* *)
+Name: {qmd} Italics (* *)
 Description: Enclose selected text with `*` and `*`.
-Binding: rmd_format_italics2
+Binding: qmd_format_italics2
 Interactive: false
 
-Name: {Rmd} Italics (_ _)
+Name: {qmd} Italics (_ _)
 Description: Enclose selected text with `_` and `_`.
-Binding: rmd_format_italics
+Binding: qmd_format_italics
 Interactive: false
 
 
 
-Name: {Rmd} Superscript (^ ^)
+Name: {qmd} Superscript (^ ^)
 Description: Enclose selected text with ^ and ^.
-Binding: rmd_format_superscript
+Binding: qmd_format_superscript
 Interactive: false
 
-Name: {Rmd} Subscript (~ ~)
+Name: {qmd} Subscript (~ ~)
 Description: Enclose selected text with ~ and ~.
-Binding: rmd_format_subscript
+Binding: qmd_format_subscript
 Interactive: false
 
-Name: {Rmd} Strike through (~~ ~~)
+Name: {qmd} Strike through (~~ ~~)
 Description: Enclose selected text with ~~ and ~~.
-Binding: rmd_format_strikethrough
+Binding: qmd_format_strikethrough
 Interactive: false
 
-Name: {Rmd} HTML comment (<!-- -->)
+Name: {qmd} HTML comment (<!-- -->)
 Description: Enclose selected text with <!-- and -->.
-Binding: rmd_format_html_comment
+Binding: qmd_format_html_comment
 Interactive: false
 
 
 
-Name: {Rmd} Increase heading level (e.g., ## -> #)
+Name: {qmd} Increase heading level (e.g., ## -> #)
 Description: Increase heading level.
-Binding: rmd_heading_level_up
+Binding: qmd_heading_level_up
 Interactive: false
 
-Name: {Rmd} Decrease heading level (e.g., # -> ##)
+Name: {qmd} Decrease heading level (e.g., # -> ##)
 Description: Decrease heading level.
-Binding: rmd_heading_level_down
+Binding: qmd_heading_level_down
 Interactive: false
 
-Name: {Rmd} Heading 1 (#)
+Name: {qmd} Heading 1 (#)
 Description: Insert #
-Binding: rmd_heading_1
+Binding: qmd_heading_1
 Interactive: false
 
-Name: {Rmd} Heading 2 (##)
+Name: {qmd} Heading 2 (##)
 Description: Insert ##
-Binding: rmd_heading_2
+Binding: qmd_heading_2
 Interactive: false
 
-Name: {Rmd} Heading 3 (###)
+Name: {qmd} Heading 3 (###)
 Description: Insert ###
-Binding: rmd_heading_3
+Binding: qmd_heading_3
 Interactive: false
 
-Name: {Rmd} Heading 4 (####)
+Name: {qmd} Heading 4 (####)
 Description: Insert ####
-Binding: rmd_heading_4
+Binding: qmd_heading_4
 Interactive: false
 
-Name: {Rmd} Heading 5 (#####)
+Name: {qmd} Heading 5 (#####)
 Description: Insert #####
-Binding: rmd_heading_5
+Binding: qmd_heading_5
 Interactive: false
 
-Name: {Rmd} Heading 6 (######)
+Name: {qmd} Heading 6 (######)
 Description: Insert ######
-Binding: rmd_heading_6
+Binding: qmd_heading_6
 Interactive: false
 
-Name: {Rmd} Heading 1 (======)
+Name: {qmd} Heading 1 (======)
 Description: Underline with ======
-Binding: rmd_heading_1_title
+Binding: qmd_heading_1_title
 Interactive: false
 
-Name: {Rmd} Heading 2 (-----------)
+Name: {qmd} Heading 2 (-----------)
 Description: Underline with ------
-Binding: rmd_heading_2_subtitle
+Binding: qmd_heading_2_subtitle
 Interactive: false
 
-Name: {Rmd} Heading: remove # style
+Name: {qmd} Heading: remove # style
 Description: Removes underline-style heading markup
-Binding: rmd_heading_remove_hash_style
+Binding: qmd_heading_remove_hash_style
 Interactive: false
 
-Name: {Rmd} Heading: remove underline
+Name: {qmd} Heading: remove underline
 Description: Removes underline-style heading markup
-Binding: rmd_heading_remove_underline
+Binding: qmd_heading_remove_underline
 Interactive: false
 
 
 
-Name: {Rmd} LaTeX equation: inline ($ $)
+Name: {qmd} LaTeX equation: inline ($ $)
 Description: Enclose selected text with `$`.
-Binding: rmd_equation_a_inline
+Binding: qmd_equation_a_inline
 Interactive: false
 
-Name: {Rmd} LaTeX equation: block ($$ $$)
+Name: {qmd} LaTeX equation: block ($$ $$)
 Description: Enclose selected text with `$$`.
-Binding: rmd_equation_b_block
+Binding: qmd_equation_b_block
 Interactive: false
 
-Name: {Rmd} LaTeX equation: block (\[   \])
+Name: {qmd} LaTeX equation: block (\[   \])
 Description: Enclose selected text with `\[` and `\]`.
-Binding: rmd_equation_b_block2
+Binding: qmd_equation_b_block2
 Interactive: false
 
 
 
-Name: {Rmd} Inline code  (` `)
+Name: {qmd} Inline code  (` `)
 Description: Enclose selected text with ` and `.
-Binding: rmd_code_inline
+Binding: qmd_code_inline
 Interactive: false
 
-Name: {Rmd} Inline R code to evaluate (`r  `)
+Name: {qmd} Inline R code to evaluate (`r  `)
 Description: Enclose selected text with `r and `.
-Binding: rmd_code_inline_r
+Binding: qmd_code_inline_r
 Interactive: false
 
-Name: {Rmd} Inline R code to highlight (`  `{.r})
+Name: {qmd} Inline R code to highlight (`  `{.r})
 Description: Enclose selected text with ` and `{.r}.
-Binding: rmd_code_inline_highlighted_as_r
+Binding: qmd_code_inline_highlighted_as_r
 Interactive: false
 
-Name: {Rmd} Code block (``` ```)
+Name: {qmd} Code block (``` ```)
 Description: Enclose selected lines with ``` and ```.
-Binding: rmd_code_block
+Binding: qmd_code_block
 Interactive: false
 
-Name: {Rmd} R code block (```{r}  ```)
+Name: {qmd} R code block (```{r}  ```)
 Description: Enclose selected lines with ```{r} and ```.
-Binding: rmd_code_block_r
+Binding: qmd_code_block_r
 Interactive: false
 
-Name: {Rmd} R code block: split (```  ```{r})
+Name: {qmd} R code block: split (```  ```{r})
 Description: Insert lines ``` and ```{r} above the selection.
-Binding: rmd_code_block_r_split
+Binding: qmd_code_block_r_split
 Interactive: false
 
-Name: {Rmd} R code block: for figure
+Name: {qmd} R code block: for figure
 Description: Inserts R code block for a figure/image.
-Binding: rmd_insert_figure_r_code_block
+Binding: qmd_insert_figure_r_code_block
 Interactive: false
 
-Name: {Rmd} Python code block (```{python}  ```)
+Name: {qmd} Python code block (```{python}  ```)
 Description: Enclose selected lines with ```{python} and ```.
-Binding: rmd_code_block_python
+Binding: qmd_code_block_python
 Interactive: false
 
-Name: {Rmd} SQL code block (```{sql}  ```)
+Name: {qmd} SQL code block (```{sql}  ```)
 Description: Enclose selected lines with ```{sql} and ```.
-Binding: rmd_code_block_sql
+Binding: qmd_code_block_sql
 Interactive: false
 
-Name: {Rmd} Footnote ^[...]
+Name: {qmd} Footnote ^[...]
 Description: Enclose selection with ^[ and ].
-Binding: rmd_format_footnote
+Binding: qmd_format_footnote
 Interactive: false
 
-Name: {Rmd} Figure ![...](...)
+Name: {qmd} Figure ![...](...)
 Description: Enclose selection with ![ and ]().
-Binding: rmd_insert_figure
+Binding: qmd_insert_figure
 Interactive: false
 
-Name: {Rmd} Link/URL [...](...)
+Name: {qmd} Link/URL [...](...)
 Description: Enclose selection with [ and ]().
-Binding: rmd_link_url
+Binding: qmd_link_url
 Interactive: false
 
 
 
-Name: {Rmd} List: remove level 1
+Name: {qmd} List: remove level 1
 Description: Remove markup of lists, block quotes and line blocks.
-Binding: rmd_remove_list
+Binding: qmd_remove_list
 Interactive: false
 
-Name: {Rmd} List: lettered (a, b, c, ...) level 1
+Name: {qmd} List: lettered (a, b, c, ...) level 1
 Description: Make lettered list (level 1).
-Binding: rmd_list_lettered
+Binding: qmd_list_lettered
 Interactive: false
 
-Name: {Rmd} List: lettered (a, b, c, ...) level 2
+Name: {qmd} List: lettered (a, b, c, ...) level 2
 Description: Make lettered list (level 2).
-Binding: rmd_list_lettered_2
+Binding: qmd_list_lettered_2
 Interactive: false
 
-Name: {Rmd} List: numbered (1, 2, 3, ...) level 1
+Name: {qmd} List: numbered (1, 2, 3, ...) level 1
 Description: Make numbered list (level 1).
-Binding: rmd_list_numbered
+Binding: qmd_list_numbered
 Interactive: false
 
-Name: {Rmd} List: numbered (1, 2, 3, ...) level 2
+Name: {qmd} List: numbered (1, 2, 3, ...) level 2
 Description: Make numbered list (level 2).
-Binding: rmd_list_numbered_2
+Binding: qmd_list_numbered_2
 Interactive: false
 
-Name: {Rmd} List: unordered (-, -, -, ...) level 1
+Name: {qmd} List: unordered (-, -, -, ...) level 1
 Description: Make unordered list (level 1).
-Binding: rmd_list_unordered
+Binding: qmd_list_unordered
 Interactive: false
 
-Name: {Rmd} List: unordered (+, +, +, ...) level 2
+Name: {qmd} List: unordered (+, +, +, ...) level 2
 Description: Make unordered list (level 2).
-Binding: rmd_list_unordered_2
+Binding: qmd_list_unordered_2
 Interactive: false
 
-Name: {Rmd} Numbered example list: (@), (@), ...
+Name: {qmd} Numbered example list: (@), (@), ...
 Description: Make numbered example list for sequentially numbered examples. Numbering does not restart.
-Binding: rmd_list_z_example_list
+Binding: qmd_list_z_example_list
 Interactive: false
 
-Name: {Rmd} Line blocks (|, |, |, ...)
+Name: {qmd} Line blocks (|, |, |, ...)
 Description: Make line blocks (useful for writing addresses).
-Binding: rmd_line_blocks
+Binding: qmd_line_blocks
 Interactive: false
 
-Name: {Rmd} Block quotes (>, >, >, ...)
+Name: {qmd} Block quotes (>, >, >, ...)
 Description: Make block quotes.
-Binding: rmd_block_quotes
+Binding: qmd_block_quotes
 Interactive: false
 
 
 
-Name: {Rmd} Horizontal rule (* * *)
+Name: {qmd} Horizontal rule (* * *)
 Description: Insert a horizontal rule (style: * * *) below the selection.
-Binding: rmd_horizontal_rule
+Binding: qmd_horizontal_rule
 Interactive: false
 
 
 
-Name: {Rmd} Symbol: asterisk (\*)
+Name: {qmd} Symbol: asterisk (\*)
 Description: Insert symbols interpreted as: `*`.
-Binding: rmd_symbol_asterisk
+Binding: qmd_symbol_asterisk
 Interactive: false
 
-Name: {Rmd} Symbol: single backslash (\\)
+Name: {qmd} Symbol: single backslash (\\)
 Description: Insert symbols interpreted as: `\`.
-Binding: rmd_symbol_backslash
+Binding: qmd_symbol_backslash
 Interactive: false
 
-Name: {Rmd} Symbol: dollar sign (\$)
+Name: {qmd} Symbol: dollar sign (\$)
 Description: Insert symbols interpreted as: `$`.
-Binding: rmd_symbol_dollar
+Binding: qmd_symbol_dollar
 Interactive: false
 
-Name: {Rmd} Symbol: underscore (\_)
+Name: {qmd} Symbol: underscore (\_)
 Description: Insert symbols interpreted as: `_`.
-Binding: rmd_symbol_underscore
+Binding: qmd_symbol_underscore
 Interactive: false
 
-Name: {Rmd} Symbol: en dash (--)
+Name: {qmd} Symbol: en dash (--)
 Description: Insert en dash.
-Binding: rmd_symbol_en_dash
+Binding: qmd_symbol_en_dash
 Interactive: false
 
-Name: {Rmd} Symbol: em dash (---)
+Name: {qmd} Symbol: em dash (---)
 Description: Insert em dash.
-Binding: rmd_symbol_em_dash
+Binding: qmd_symbol_em_dash
 Interactive: false
 
-Name: {Rmd} Table: simple style (example)
+Name: {qmd} Table: simple style (example)
 Description: Insert an example of table.
-Binding: rmd_table_style_simple
+Binding: qmd_table_style_simple
 Interactive: false
 
-Name: {Rmd} Table: markdown style 1 (example)
-Description: Insert an example of R Markdown table.
-Binding: rmd_table_style_md
+Name: {qmd} Table: markdown style 1 (example)
+Description: Insert an example of Quarto/Pandoc markdown table.
+Binding: qmd_table_style_md
 Interactive: false
 
-Name: {Rmd} Table: markdown style 2 (example)
-Description: Insert an example of R Markdown table.
-Binding: rmd_table_style_md_alternative
+Name: {qmd} Table: markdown style 2 (example)
+Description: Insert an example of Quarto/Pandoc markdown table.
+Binding: qmd_table_style_md_alternative
 Interactive: false
 
-Name: {Rmd} Table: multiline style (example)
+Name: {qmd} Table: multiline style (example)
 Description: Insert an example of table.
-Binding: rmd_table_style_multiline
+Binding: qmd_table_style_multiline
 Interactive: false
 
-Name: {Rmd} Table: multiline, no col.names (example)
+Name: {qmd} Table: multiline, no col.names (example)
 Description: Insert an example of table.
-Binding: rmd_table_style_multiline_no_colnames
+Binding: qmd_table_style_multiline_no_colnames
 Interactive: false
 
-Name: {Rmd} Table: grid style (example)
+Name: {qmd} Table: grid style (example)
 Description: Insert an example of table.
-Binding: rmd_table_style_grid
+Binding: qmd_table_style_grid
 Interactive: false

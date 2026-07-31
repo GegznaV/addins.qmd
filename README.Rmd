@@ -13,41 +13,19 @@ knitr::opts_chunk$set(
 ```
 
 <!-- badges: start -->
+<!-- [![CRAN_Status](https://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd) -->
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addins.rmd)](https://cran.r-project.org/package=addins.rmd)
-[![GitHub version](https://img.shields.io/badge/GitHub-`r packageVersion("addins.rmd")`-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
-[![R-CMD-check](https://github.com/GegznaV/addins.rmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.rmd/actions)
+[![GitHub version](https://img.shields.io/badge/GitHub-`r read.dcf('DESCRIPTION')[1, 'Version']`-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
+[![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
+[![Codecov test coverage](https://codecov.io/gh/GegznaV/addins.qmd/graph/badge.svg)](https://app.codecov.io/gh/GegznaV/addins.qmd)
 [![Updated-on](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 ***
 
+# R package **addins.qmd** <img src="man/figures/logo.png" align="right" height="136" alt="" />
 
-<!-- 
-```{r, fig.align='center', out.height='30%', out.width='30%', echo=FALSE, eval = FALSE}
-# knitr::include_graphics("http://gegznav.github.io/addins.rmd/logo.png")
-``` 
--->
-
-
-<img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>
-
-
-# R package **addins.rmd**  
-
-Package `addins.rmd` is an *R* package that provides a set of *RStudio* add-ins for *R Markdown*. The main purpose of this package is to alleviate learning process of *R Markdown* syntax. 
-
-<!-- 
-
-1) **format text in R Markdown documents**:
-    - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*"
-that is interpreted as "**bold**").
-2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position;
-3)  **replace** symbols in selected
-pieces of text (e.g., convert backslashes to forward slashes which results
-in strings like `"c:\data\"` converted into `"c:/data/"`).
-
--->
+Package `addins.qmd` is an *R* package that provides a set of *RStudio* add-ins for *Quarto* documents. The main purpose of this package is to make learning Quarto and Pandoc Markdown syntax faster.
 
 
 ## Install Package
@@ -56,12 +34,11 @@ Install package from CRAN-like repository:
 
 ```{r Install package from CRAN, eval=FALSE}
 repos <- c("https://mokymai.github.io/download/", getOption("repos"))
-install.packages("addins.rmd", repos = repos)
+install.packages("addins.qmd", repos = repos)
 ```
 
 
-<details>
-<summary>Install from GitHub</summary>
+<details><summary>Install from GitHub</summary>
 
 Install development version from GitHub:
 
@@ -71,37 +48,24 @@ if (!require(remotes)) {
 }
 
 remotes::install_github("GegznaV/addin.tools")
-remotes::install_github("GegznaV/addins.rmd")
+remotes::install_github("GegznaV/addins.qmd")
 ```
 </details>
 
 
-# How to Use Thse Add-ins
-
-<!-- 
-Recommended workflow and a few examples
------------------------------------------------------
-
-Get started online http://gegznav.github.io/addins.rmd/articles/v1_workflow.html
-
-And offline:
-```{r, eval=FALSE}
-vignette("v1_workflow", package = "addins.rmd")
-```
-browseVignettes("addins.rmd") 
--->
+# How to Use These Add-ins
 
 
 For the current version of the package:
 
 1) Find and click *RStudio* "Addins" button;
-2) Type **`{Rmd}`** in the add-ins search box;
-3) All the add-ins of the package **addins.rmd** will be displayed in the drop-down list below.
+2) Type **`{qmd}`** in the add-ins search box;
+3) All the add-ins of the package **addins.qmd** will be displayed in the drop-down list below.
 
 ```{r steps-search-addins, echo=FALSE, fig.cap=CAPTION, out.width=400}
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/steps-search-addins.png")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/steps-search-addins.png")
 
-CAPTION <- "**Fig. 1.** Steps to find addins of the package **addins.rmd**.  "
+CAPTION <- "**Fig. 1.** Steps to find addins of the package **addins.qmd**.  "
 ```
 
 Below you can find a few examples how to use the add-ins of the package.
@@ -112,9 +76,9 @@ Below you can find a few examples how to use the add-ins of the package.
 ```{r fig-ID-1, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION <- "**Fig. 2.** **Demonstration 1: headings.**
 Place a cursor with a mouse and use a necessary add-in.
-*(In this demonstrations, older version of the package is used.)*"
+*(In this demonstration, older version of the package is used.)*"
 
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-headings-1.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-headings-1.gif")
 ```
 
 <br>
@@ -122,7 +86,7 @@ knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-headings
 ```{r fig-ID-2, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION <- "**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  "
 
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-headings-2.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-headings-2.gif")
 ```
 
 
@@ -131,9 +95,9 @@ knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-headings
 ```{r fig-ID-3, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION <- "**Fig. 4.** **Demonstration 3: basic formatting.**
 Before using this type of add-in, select a piece of text that should be formatted.
-*(In this demonstrations, older version of the package is used.)*  "
+*(In this demonstration, older version of the package is used.)*  "
 
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-formatting-1.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-formatting-1.gif")
 ```
 
 
@@ -143,9 +107,9 @@ knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-formatti
 CAPTION <- "**Fig. 5.** **Demonstration 4: lists.**
 The lists can be numbered and unnumbered.
 They can have several levels.
-*(In this demonstrations, older version of the package is used.)*  "
+*(In this demonstration, older version of the package is used.)*  "
 
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-lists-1.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-lists-1.gif")
 ```
 
 
@@ -155,8 +119,21 @@ knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-lists-1.
 CAPTION <- "**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  "
 
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-chunk-add-1.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-chunk-add-1.gif")
 ```
+
+## Quarto-First Scope
+
+This package is Quarto-first. Most add-ins produce syntax that works in Quarto documents and is powered by Pandoc Markdown.
+
+Some add-ins have limited behavior in RStudio Markdown Visual Editor mode. When this happens, use Source editor mode or the related native Visual Editor command.
+
+## API Surface Conventions
+
+- Exported functions with the `qmd_` prefix are the supported user-facing addins.
+- Some addin bindings intentionally target non-exported functions for RStudio addin dispatch compatibility.
+- Non-exported helper functions are internal and may change between releases.
+- Visual Editor command support is implemented incrementally and falls back to source-mode behavior or warnings when commands are unavailable.
 
 
 # See Also
@@ -166,17 +143,17 @@ and especially how to use them in combination with user-defined
 keyboard shortcuts:
 
 1. [RStudio add-ins](https://rstudio.github.io/rstudioaddins/);
-2. [Keyboard shortcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts);
+2. [Keyboard shortcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shortcuts);
 3. [Customizing keyboard shortcuts.](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts)
 
 
-## Pandoc's Markdown
+## Quarto Markdown (Pandoc)
 
-*R Markdown* syntax is based on Pandoc's Markdown syntax. 
+Quarto markdown is based on Pandoc's Markdown syntax.
 If you need more advanced formatting options, please, read more at:
 
 - [https://pandoc.org/MANUAL.html#pandocs-markdown](https://pandoc.org/MANUAL.html#pandocs-markdown){target="_blank"}
 
 ***
 
-Online docuentation at http://gegznav.github.io/addins.rmd/
+Online documentation at https://gegznav.github.io/addins.qmd/

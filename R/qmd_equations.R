@@ -6,37 +6,37 @@
 #' Select a piece of text with a cursor and call these functions as an add-in
 #' to enclose the text with special symbols. Text between `$.$` is
 #' interpreted as an inline equation and between `$$.$$` or `\[.\]`
-#' as a block equation in R Markdown.
+#' as a block equation in Quarto/Pandoc Markdown.
 #'
-#' @name rmd_equations
+#' @name qmd_equations
 #'
 #' @inheritParams addin.tools::rs_get_index
 #'
-#' @family R Markdown formatting add-ins
+#' @family Quarto formatting add-ins
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_equations
+#' @rdname qmd_equations
 #' @export
-rmd_equation_a_inline <- function(context = rs_get_context()) {
+qmd_equation_a_inline <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
     symbol = "$",
     context = context
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_equations
+#' @rdname qmd_equations
 #' @export
-rmd_equation_b_block <- function(context = rs_get_context()) {
+qmd_equation_b_block <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
     symbol = "$$",
     context = context
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_equations
+#' @rdname qmd_equations
 #' @export
-rmd_equation_b_block2 <- function(context = rs_get_context()) {
+qmd_equation_b_block2 <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
     symbol_before = "\\[", symbol_after = "\\]",
     context = context
