@@ -2,18 +2,16 @@ Package: addins.qmd
 Type: Package
 Title: RStudio Add-ins for Quarto Documents
 Version: 0.0.1
-Date: 2022-08-03  
+Date: 2026-07-31  
 Authors@R: person("Vilmantas", "Gegzna",
                   email = "GegznaV@gmail.com",
                   role = c("aut", "cre", "cph")
             )
-Author: Vilmantas Gegzna [aut, cre, cph]
-Maintainer: Vilmantas Gegzna <GegznaV@gmail.com>
 Description: Package `addins.qmd` contains RStudio add-ins to format Quarto
              documents. The main purpose of this package is to help beginners
              learn Quarto and Pandoc Markdown syntax faster and use keyboard
              shortcuts for common authoring elements.
-URL: https://GegznaV.github.io, https://gegznav.github.io/addins.qmd/
+URL: https://gegznav.github.io/addins.qmd/, https://github.com/GegznaV/addins.qmd
 BugReports: https://github.com/GegznaV/addins.qmd/issues
 License: MIT + file LICENSE
 ByteCompile: TRUE
