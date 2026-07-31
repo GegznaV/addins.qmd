@@ -30,12 +30,12 @@ knitr::opts_chunk$set(
 -->
 
 
-<img src="http://gegznav.github.io/addins.qmd/logo.png" align="right" width="15%" height="15%"/>
+<img src="https://gegznav.github.io/addins.qmd/logo.png" align="right" width="15%" height="15%"/>
 
 
 # R package **addins.qmd**  
 
-Package `addins.qmd` is an *R* package that provides a set of *RStudio* add-ins for *R Markdown*. The main purpose of this package is to alleviate learning process of *R Markdown* syntax. 
+Package `addins.qmd` is an *R* package that provides a set of *RStudio* add-ins for *Quarto* documents. The main purpose of this package is to make learning Quarto and Pandoc Markdown syntax faster.
 
 <!-- 
 
@@ -76,7 +76,7 @@ remotes::install_github("GegznaV/addins.qmd")
 </details>
 
 
-# How to Use Thse Add-ins
+# How to Use These Add-ins
 
 <!-- 
 Recommended workflow and a few examples
@@ -95,7 +95,7 @@ browseVignettes("addins.qmd")
 For the current version of the package:
 
 1) Find and click *RStudio* "Addins" button;
-2) Type **`{md}`** in the add-ins search box;
+2) Type **`{qmd}`** in the add-ins search box;
 3) All the add-ins of the package **addins.qmd** will be displayed in the drop-down list below.
 
 ```{r steps-search-addins, echo=FALSE, fig.cap=CAPTION, out.width=400}
@@ -158,6 +158,12 @@ Select one or several lines with code, select an appropriate add-in and include 
 knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-chunk-add-1.gif")
 ```
 
+## Quarto-First Scope
+
+This package is Quarto-first. Most add-ins produce syntax that works in Quarto documents and is powered by Pandoc Markdown.
+
+Some add-ins have limited behavior in RStudio Markdown Visual Editor mode. When this happens, use Source editor mode or the related native Visual Editor command.
+
 
 # See Also
 
@@ -170,13 +176,13 @@ keyboard shortcuts:
 3. [Customizing keyboard shortcuts.](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts)
 
 
-## Pandoc's Markdown
+## Quarto Markdown (Pandoc)
 
-*R Markdown* syntax is based on Pandoc's Markdown syntax. 
+Quarto markdown is based on Pandoc's Markdown syntax.
 If you need more advanced formatting options, please, read more at:
 
 - [https://pandoc.org/MANUAL.html#pandocs-markdown](https://pandoc.org/MANUAL.html#pandocs-markdown){target="_blank"}
 
 ***
 
-Online docuentation at http://gegznav.github.io/addins.qmd/
+Online documentation at https://gegznav.github.io/addins.qmd/
