@@ -90,7 +90,6 @@ qmd_heading_2_subtitle <- function(context = rs_get_context()) {
 #' @export
 qmd_heading_remove <- function(style = c("auto", "both", "hash", "underline"),
   context = rs_get_context()) {
-
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   if (is_visual_editor()) {
     rstudioapi::sendToConsole(
@@ -223,7 +222,7 @@ qmd_heading_level_change <- function(direction, context = rs_get_context()) {
     switch(direction,
       "down" = min(6, level + 1),
       "up" = max(0, level - 1)
-  )
+    )
 
   symbol <- stringr::str_dup("#", new_level)
   if (new_level != 0) {
@@ -232,6 +231,3 @@ qmd_heading_level_change <- function(direction, context = rs_get_context()) {
 
   add_hash_style_heading(symbol, context = context)
 }
-
-
-
