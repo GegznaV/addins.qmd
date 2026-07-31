@@ -3,6 +3,7 @@
 \name{qmd_headings}
 \alias{qmd_headings}
 \alias{qmd_heading_hash}
+\alias{qmd_heading_1}
 \alias{qmd_heading_2}
 \alias{qmd_heading_3}
 \alias{qmd_heading_4}
@@ -14,6 +15,8 @@
 \title{Format text as Quarto/Pandoc Markdown headings.}
 \usage{
 qmd_heading_hash(symbol, command, context = rs_get_context())
+
+qmd_heading_1(context = rs_get_context())
 
 qmd_heading_2(context = rs_get_context())
 
@@ -60,3 +63,4 @@ apply \code{qmd_heading_remove()} to remove heading style (leading hash
 symbols and underline) and then format the first selected row as a heading
 of an appropriate level.
 }
+\keyword{internal}
