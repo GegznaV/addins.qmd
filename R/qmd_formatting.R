@@ -29,9 +29,27 @@
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Command-based formatting in Visual Editor mode.
+run_visual_editor_command <- function(command) {
+  tryCatch(
+    {
+      rstudioapi::executeCommand(command, quiet = TRUE)
+      TRUE
+    },
+    error = function(...) FALSE
+  )
+}
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
 qmd_format_bold <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
+    if (run_visual_editor_command("markdownBold")) {
+      return(invisible(NULL))
+    }
+  }
+
   rs_enclose_selection_with(
     symbol = "**",
     context = context
@@ -41,6 +59,12 @@ qmd_format_bold <- function(context = rs_get_context()) {
 #' @rdname format_rmd
 #' @export
 qmd_format_italics <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
+    if (run_visual_editor_command("markdownItalic")) {
+      return(invisible(NULL))
+    }
+  }
+
   rs_enclose_selection_with(
     symbol = "_",
     context = context
@@ -86,6 +110,12 @@ qmd_format_html_comment <- function(context = rs_get_context()) {
 #' @rdname format_rmd
 #' @export
 qmd_code_inline <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
+    if (run_visual_editor_command("markdownCode")) {
+      return(invisible(NULL))
+    }
+  }
+
   rs_enclose_selection_with(
     symbol = "`",
     context = context
@@ -131,6 +161,12 @@ qmd_format_subscript <- function(context = rs_get_context()) {
 #' @rdname format_rmd
 #' @export
 qmd_format_strikethrough <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
+    if (run_visual_editor_command("markdownStrikethrough")) {
+      return(invisible(NULL))
+    }
+  }
+
   rs_enclose_selection_with(
     symbol = "~~",
     context = context
@@ -174,6 +210,12 @@ pattern_url_2 <- "^(((http(s)?|(ftp(s)?))://)(www\\.)?([a-zA-Z0-9][a-zA-Z0-9\\.\
 #' @rdname format_rmd
 #' @export
 qmd_link_url <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
+    if (run_visual_editor_command("markdownLink")) {
+      return(invisible(NULL))
+    }
+  }
+
   rs_enclose_selection_with(
     symbol_before = "[", symbol_after = "](url_link)",
     context = context
