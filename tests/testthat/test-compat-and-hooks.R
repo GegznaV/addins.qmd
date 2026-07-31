@@ -21,4 +21,3 @@ test_that("run_visual_editor_command returns FALSE on command error", {
 
   expect_false(addins.qmd:::run_visual_editor_command("doesNotExist"))
 })
-
