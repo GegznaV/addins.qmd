@@ -24,9 +24,9 @@ interpreted as an inline equation and between \verb{$$.$$} or \verb{\[.\]}
 as a block equation in R Markdown.
 }
 \seealso{
-Other R Markdown formatting add-ins:
+Other R Markdown formatting add-ins: 
 \code{\link{format_rmd}},
-\code{\link[=qmd_code_block]{qmd_code_block()}},
-\code{\link[=qmd_list]{qmd_list()}}
+\code{\link{qmd_code_block}()},
+\code{\link{qmd_list}()}
 }
 \concept{R Markdown formatting add-ins}

@@ -19,10 +19,5 @@ Useful links:
 \author{
 \strong{Maintainer}: Vilmantas Gegzna \email{GegznaV@gmail.com} [copyright holder]
 
-Authors:
-\itemize{
-  \item Vilmantas Gegzna \email{GegznaV@gmail.com} [copyright holder]
-}
-
 }
 \keyword{internal}

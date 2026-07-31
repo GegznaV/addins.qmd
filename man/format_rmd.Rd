@@ -84,9 +84,14 @@ interpretation in R Markdown.
 \seealso{
 https://pandoc.org/MANUAL.html#backslash-escapes
 
-Other R Markdown formatting add-ins:
-\code{\link[=qmd_code_block]{qmd_code_block()}},
+Other R Markdown formatting add-ins: 
+\code{\link{qmd_code_block}()},
 \code{\link{qmd_equations}},
-\code{\link[=qmd_list]{qmd_list()}}
+\code{\link{qmd_list}()}
+
+Other R Markdown formatting add-ins: 
+\code{\link{qmd_code_block}()},
+\code{\link{qmd_equations}},
+\code{\link{qmd_list}()}
 }
 \concept{R Markdown formatting add-ins}

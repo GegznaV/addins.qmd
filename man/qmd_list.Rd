@@ -52,9 +52,9 @@ For the first-level lists: \itemize{
 }
 }
 \seealso{
-Other R Markdown formatting add-ins:
+Other R Markdown formatting add-ins: 
 \code{\link{format_rmd}},
-\code{\link[=qmd_code_block]{qmd_code_block()}},
+\code{\link{qmd_code_block}()},
 \code{\link{qmd_equations}}
 }
 \concept{R Markdown formatting add-ins}
