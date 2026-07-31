@@ -119,6 +119,41 @@ test_that("heading wrappers route to hash and underline helpers", {
   expect_true(all(vapply(called, function(x) identical(x$context, ctx), logical(1))))
 })
 
+test_that("heading wrappers use visual editor commands when available", {
+  commands <- character()
+
+  local_mocked_bindings(
+    is_visual_editor = function() TRUE,
+    run_visual_editor_command = function(command) {
+      commands <<- c(commands, command)
+      TRUE
+    },
+    add_hash_style_heading = function(symbol, context) {
+      fail("source-mode heading helper should not be called in visual editor mode")
+    },
+    .package = "addins.qmd"
+  )
+
+  qmd_heading_1()
+  qmd_heading_2()
+  qmd_heading_3()
+  qmd_heading_4()
+  qmd_heading_5()
+  qmd_heading_6()
+
+  expect_identical(
+    commands,
+    c(
+      "markdownHeader1",
+      "markdownHeader2",
+      "markdownHeader3",
+      "markdownHeader4",
+      "markdownHeader5",
+      "markdownHeader6"
+    )
+  )
+})
+
 test_that("heading remove warns in visual editor mode", {
   ctx <- list(id = "doc-id")
   warning_call <- NULL
