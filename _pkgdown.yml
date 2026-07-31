@@ -1,8 +1,9 @@
 url: https://gegznav.github.io/addins.qmd/
 template:
   bootstrap: 5
-  bootswatch: sandstone
   light-switch: true
+  bootswatch: sandstone
+  bootswatch_dark: darkly
   bslib:
     primary: "#1b4332"     # Deep Dark Green
     secondary: "#2d6a4f"   # Medium Sage
@@ -14,5 +15,4 @@ template:
 # Search settings
 search:
   backend: docsearch
-
 
