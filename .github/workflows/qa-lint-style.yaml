@@ -1,0 +1,37 @@
+name: Lint and style checks
+
+on:
+  push:
+    branches: [main, master, devel]
+  pull_request:
+    branches: [main, master, devel]
+  workflow_dispatch:
+
+jobs:
+  lint-style:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v3
+        with:
+          r-version: "release"
+          use-public-rspm: true
+          extra-repositories: "https://mokymai.github.io/download/"
+
+      - uses: r-lib/actions/setup-r-dependencies@v3
+        with:
+          extra-packages: |
+            any::lintr
+            any::styler
+          needs: lint
+
+      - name: Validate .lintr and run lintr
+        run: |
+          Rscript -e "read.dcf('.lintr')"
+          Rscript -e "lintr::lint_package()"
+
+      - name: Verify style (no write)
+        run: |
+          Rscript -e "styler::style_pkg(strict = FALSE, dry = 'fail')"
