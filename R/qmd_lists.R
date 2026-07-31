@@ -25,6 +25,20 @@
 
 qmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) {
   if (is_visual_editor()) {
+    if (level == 1) {
+      if (type %in% c("1", "ordered", "numbered", "numbers")) {
+        if (run_visual_editor_command("markdownOrderedList")) {
+          return(invisible(NULL))
+        }
+      }
+
+      if (type %in% c("+", "-", "*", "unordered")) {
+        if (run_visual_editor_command("markdownBulletList")) {
+          return(invisible(NULL))
+        }
+      }
+    }
+
     rstudioapi::sendToConsole(
       'warning(
         "List-related package `addins.qmd` addins do not work in ",
@@ -183,7 +197,15 @@ qmd_remove_list <- function(context = rs_get_context()) {
   pattern <- stringr::str_glue("^{level}(([|>*+-])|({ord}[\\.\\)])|(\\({ord}\\)))(\\s|$)")
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   lines <- rs_get_selected_rows(context)
-  wo_list <- stringr::str_replace(lines, pattern, "")
+  # Remove stacked list markers such as "- 1. item" in one run.
+  wo_list <- lines
+  repeat {
+    next_lines <- stringr::str_replace(wo_list, pattern, "")
+    if (isTRUE(all.equal.character(wo_list, next_lines, check.attributes = FALSE))) {
+      break
+    }
+    wo_list <- next_lines
+  }
 
   if (!isTRUE(all.equal.character(lines, wo_list, check.attributes = FALSE))) {
     inds <- attr(lines, "row_numbers")
