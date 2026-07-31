@@ -39,8 +39,8 @@ Package `addins.qmd` is an *R* package that provides a set of *RStudio* add-ins 
 
 <!-- 
 
-1) **format text in R Markdown documents**:
-    - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*"
+1) **format text in Quarto documents**:
+  - **enclose** either selected text or selected rows with special symbols and text gets interpreted in a special way when rendered with Quarto/Pandoc Markdown (e.g., converts "bold" into "\*\*bold\*\*"
 that is interpreted as "**bold**").
 2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position;
 3)  **replace** symbols in selected
