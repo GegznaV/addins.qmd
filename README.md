@@ -17,13 +17,13 @@ version](https://img.shields.io/badge/GitHub-0.0.13-brightgreen.svg)](https://gi
 
 -->
 
-<img src="http://gegznav.github.io/addins.qmd/logo.png" align="right" width="15%" height="15%"/>
+<img src="https://gegznav.github.io/addins.qmd/logo.png" align="right" width="15%" height="15%"/>
 
 # R package **addins.qmd**
 
 Package `addins.qmd` is an *R* package that provides a set of *RStudio*
-add-ins for *R Markdown*. The main purpose of this package is to
-alleviate learning process of *R Markdown* syntax.
+add-ins for *Quarto* documents. The main purpose of this package is to
+make learning Quarto and Pandoc Markdown syntax faster.
 
 <!-- 
 
@@ -64,7 +64,7 @@ remotes::install_github("GegznaV/addins.qmd")
 
 </details>
 
-# How to Use Thse Add-ins
+# How to Use These Add-ins
 
 <!-- 
 Recommended workflow and a few examples
@@ -83,7 +83,7 @@ browseVignettes("addins.qmd")
 For the current version of the package:
 
 1)  Find and click *RStudio* “Addins” button;
-2)  Type **`{md}`** in the add-ins search box;
+2)  Type **`{qmd}`** in the add-ins search box;
 3)  All the add-ins of the package **addins.qmd** will be displayed in
     the drop-down list below.
 
@@ -127,6 +127,15 @@ They can have several levels.
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " alt="**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " width="600" />
 
+## Quarto-First Scope
+
+This package is Quarto-first. Most add-ins produce syntax that works in
+Quarto documents and is powered by Pandoc Markdown.
+
+Some add-ins have limited behavior in RStudio Markdown Visual Editor
+mode. When this happens, use Source editor mode or the related native
+Visual Editor command.
+
 # See Also
 
 Use the links below to learn more about RStudio add-ins and especially
@@ -138,14 +147,14 @@ how to use them in combination with user-defined keyboard shortcuts:
 3.  [Customizing keyboard
     shortcuts.](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts)
 
-## Pandoc’s Markdown
+## Quarto Markdown (Pandoc)
 
-*R Markdown* syntax is based on Pandoc’s Markdown syntax. If you need
-more advanced formatting options, please, read more at:
+Quarto markdown is based on Pandoc’s Markdown syntax. If you need more
+advanced formatting options, please, read more at:
 
 -   <a href="https://pandoc.org/MANUAL.html#pandocs-markdown"
     target="_blank">https://pandoc.org/MANUAL.html#pandocs-markdown</a>
 
 ------------------------------------------------------------------------
 
-Online docuentation at <http://gegznav.github.io/addins.qmd/>
+Online documentation at <https://gegznav.github.io/addins.qmd/>
