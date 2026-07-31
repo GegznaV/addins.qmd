@@ -6,9 +6,9 @@
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
 [![GitHub
-version](https://img.shields.io/badge/GitHub-0.0.13-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
+version](https://img.shields.io/badge/GitHub-0.0.1-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2022--07--28-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2026--07--31-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 ------------------------------------------------------------------------
@@ -74,7 +74,7 @@ Get started online http://gegznav.github.io/addins.qmd/articles/v1_workflow.html
 
 And offline:
 
-```r
+``` r
 vignette("v1_workflow", package = "addins.qmd")
 ```
 browseVignettes("addins.qmd") 
@@ -82,50 +82,93 @@ browseVignettes("addins.qmd")
 
 For the current version of the package:
 
-1)  Find and click *RStudio* “Addins” button;
-2)  Type **`{qmd}`** in the add-ins search box;
-3)  All the add-ins of the package **addins.qmd** will be displayed in
+1.  Find and click *RStudio* “Addins” button;
+2.  Type **`{qmd}`** in the add-ins search box;
+3.  All the add-ins of the package **addins.qmd** will be displayed in
     the drop-down list below.
 
-<img src="https://gegznav.github.io/addins.qmd/figs/steps-search-addins.png" title="**Fig. 1.** Steps to find addins of the package **addins.qmd**.  " alt="**Fig. 1.** Steps to find addins of the package **addins.qmd**.  " width="400" />
+<div class="figure">
+
+<img src="https://gegznav.github.io/addins.qmd/figs/steps-search-addins.png" alt="**Fig. 1.** Steps to find addins of the package **addins.qmd**.  " width="400" />
+<p class="caption">
+**Fig. 1.** Steps to find addins of the package **addins.qmd**.
+</p>
+
+</div>
 
 Below you can find a few examples how to use the add-ins of the package.
 
 ## Convert Text into Headings
 
-<img src="https://gegznav.github.io/addins.qmd/figs/demo-headings-1.gif" title="**Fig. 2.** **Demonstration 1: headings.**
-Place a cursor with a mouse and use a necessary add-in.
-*(In this demonstrations, older version of the package is used.)*" alt="**Fig. 2.** **Demonstration 1: headings.**
+<div class="figure">
+
+<img src="https://gegznav.github.io/addins.qmd/figs/demo-headings-1.gif" alt="**Fig. 2.** **Demonstration 1: headings.**
 Place a cursor with a mouse and use a necessary add-in.
 *(In this demonstrations, older version of the package is used.)*" width="600" />
+<p class="caption">
+**Fig. 2.** **Demonstration 1: headings.** Place a cursor with a mouse
+and use a necessary add-in. *(In this demonstrations, older version of
+the package is used.)*
+</p>
+
+</div>
 
 <br>
 
-<img src="https://gegznav.github.io/addins.qmd/figs/demo-headings-2.gif" title="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="600" />
+<div class="figure">
+
+<img src="https://gegznav.github.io/addins.qmd/figs/demo-headings-2.gif" alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="600" />
+<p class="caption">
+**Fig. 3.** Demonstration 2: headings.\*\* Notice that, if needed, a
+blank line above the selection is added.
+</p>
+
+</div>
 
 ## Basic Text Formatting
 
-<img src="https://gegznav.github.io/addins.qmd/figs/demo-formatting-1.gif" title="**Fig. 4.** **Demonstration 3: basic formatting.**
-Before using this type of add-in, select a piece of text that should be formatted.
-*(In this demonstrations, older version of the package is used.)*  " alt="**Fig. 4.** **Demonstration 3: basic formatting.**
+<div class="figure">
+
+<img src="https://gegznav.github.io/addins.qmd/figs/demo-formatting-1.gif" alt="**Fig. 4.** **Demonstration 3: basic formatting.**
 Before using this type of add-in, select a piece of text that should be formatted.
 *(In this demonstrations, older version of the package is used.)*  " width="600" />
+<p class="caption">
+**Fig. 4.** **Demonstration 3: basic formatting.** Before using this
+type of add-in, select a piece of text that should be formatted. *(In
+this demonstrations, older version of the package is used.)*
+</p>
+
+</div>
 
 ## Create Lists
 
-<img src="https://gegznav.github.io/addins.qmd/figs/demo-lists-1.gif" title="**Fig. 5.** **Demonstration 4: lists.**
-The lists can be numbered and unnumbered.
-They can have several levels.
-*(In this demonstrations, older version of the package is used.)*  " alt="**Fig. 5.** **Demonstration 4: lists.**
+<div class="figure">
+
+<img src="https://gegznav.github.io/addins.qmd/figs/demo-lists-1.gif" alt="**Fig. 5.** **Demonstration 4: lists.**
 The lists can be numbered and unnumbered.
 They can have several levels.
 *(In this demonstrations, older version of the package is used.)*  " width="600" />
+<p class="caption">
+**Fig. 5.** **Demonstration 4: lists.** The lists can be numbered and
+unnumbered. They can have several levels. *(In this demonstrations,
+older version of the package is used.)*
+</p>
+
+</div>
 
 ## Create R Code Chunks
 
-<img src="https://gegznav.github.io/addins.qmd/figs/demo-chunk-add-1.gif" title="**Fig. 6.** **Demonstration 5: R code chunks.**
-Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " alt="**Fig. 6.** **Demonstration 5: R code chunks.**
+<div class="figure">
+
+<img src="https://gegznav.github.io/addins.qmd/figs/demo-chunk-add-1.gif" alt="**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " width="600" />
+<p class="caption">
+**Fig. 6.** **Demonstration 5: R code chunks.** Select one or several
+lines with code, select an appropriate add-in and include code into a
+chunk.
+</p>
+
+</div>
 
 ## Quarto-First Scope
 
@@ -152,8 +195,7 @@ how to use them in combination with user-defined keyboard shortcuts:
 Quarto markdown is based on Pandoc’s Markdown syntax. If you need more
 advanced formatting options, please, read more at:
 
--   <a href="https://pandoc.org/MANUAL.html#pandocs-markdown"
-    target="_blank">https://pandoc.org/MANUAL.html#pandocs-markdown</a>
+-   <https://pandoc.org/MANUAL.html#pandocs-markdown>
 
 ------------------------------------------------------------------------
 
