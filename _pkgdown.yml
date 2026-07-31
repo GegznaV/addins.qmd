@@ -16,3 +16,15 @@ template:
 search:
   backend: docsearch
 
+# -------------------------------------------------------------------------
+# Automatically switches, which verion should be built:
+# released or in-development
+
+development:
+  mode: auto
+
+# development:
+#   mode: unreleased
+#   destination: devel
+#   version_label: default
+#   version_tooltip: "Github version"
