@@ -22,7 +22,7 @@
 #' [addin.tools::rs_enclose_selected_rows_with()] -
 #' that adds lines above and below the selection.
 #'
-#' @importFrom addin.tools rs_get_context is_visual_editor
+#' @importFrom addin.tools rs_get_context
 #'
 #' @inheritParams addin.tools::rs_get_index
 #'
