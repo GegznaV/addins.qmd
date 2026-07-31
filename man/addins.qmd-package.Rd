@@ -6,13 +6,15 @@
 \alias{addins.qmd-package}
 \title{addins.qmd: RStudio Add-ins for Quarto Documents}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Package `addins.qmd` contains RStudio add-ins to format Quarto documents. The main purpose of this package is to help beginners learn Quarto and Pandoc Markdown syntax faster and use keyboard shortcuts for common authoring elements.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://GegznaV.github.io}
   \item \url{https://gegznav.github.io/addins.qmd/}
+  \item \url{https://github.com/GegznaV/addins.qmd}
   \item Report bugs at \url{https://github.com/GegznaV/addins.qmd/issues}
 }
 
