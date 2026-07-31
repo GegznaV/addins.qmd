@@ -1,0 +1,58 @@
+# Package index
+
+## All functions
+
+- [`qmd_format_bold()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_format_italics()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_format_bold_italics()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_format_bold2()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_format_italics2()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_format_html_comment()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_code_inline()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_code_inline_r()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_code_inline_highlighted_as_r()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_format_superscript()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_format_subscript()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_format_strikethrough()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_format_footnote()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_horizontal_rule()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_link_url()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_insert_figure()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_insert_figure_r_code_block()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_symbol_asterisk()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_symbol_backslash()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_symbol_underscore()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_symbol_dollar()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_symbol_en_dash()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  [`qmd_symbol_em_dash()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+  : Add-ins for basic Quarto/Pandoc Markdown formatting.
+- [`qmd_code_block_r()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md)
+  [`qmd_code_block_python()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md)
+  [`qmd_code_block_sql()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md)
+  [`qmd_code_block()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md)
+  [`qmd_code_block_r_split()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md)
+  : Convert rows into the block of code.
+- [`qmd_equation_a_inline()`](https://gegznav.github.io/addins.qmd/reference/qmd_equations.md)
+  [`qmd_equation_b_block()`](https://gegznav.github.io/addins.qmd/reference/qmd_equations.md)
+  [`qmd_equation_b_block2()`](https://gegznav.github.io/addins.qmd/reference/qmd_equations.md)
+  : Format as LaTeX equation.
+- [`qmd_list()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
+  [`qmd_block_quotes()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
+  [`qmd_line_blocks()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
+  [`qmd_list_unordered()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
+  [`qmd_list_unordered_2()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
+  [`qmd_list_numbered()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
+  [`qmd_list_numbered_2()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
+  [`qmd_list_lettered()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
+  [`qmd_list_lettered_2()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
+  [`qmd_list_z_example_list()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
+  : Format text as Quarto/Pandoc Markdown list.
+- [`qmd_remove_list()`](https://gegznav.github.io/addins.qmd/reference/qmd_remove_list.md)
+  : Remove list-like formatting
+- [`qmd_table_style_md()`](https://gegznav.github.io/addins.qmd/reference/qmd_tables.md)
+  [`qmd_table_style_md_alternative()`](https://gegznav.github.io/addins.qmd/reference/qmd_tables.md)
+  [`qmd_table_style_multiline()`](https://gegznav.github.io/addins.qmd/reference/qmd_tables.md)
+  [`qmd_table_style_multiline_no_colnames()`](https://gegznav.github.io/addins.qmd/reference/qmd_tables.md)
+  [`qmd_table_style_simple()`](https://gegznav.github.io/addins.qmd/reference/qmd_tables.md)
+  [`qmd_table_style_grid()`](https://gegznav.github.io/addins.qmd/reference/qmd_tables.md)
+  : Insert Quarto/Pandoc Markdown tables

@@ -1,42 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://GegznaV.github.io/404.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/index.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/reference/addins.rmd-package.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/reference/format_rmd.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/reference/rmd_code_block.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/reference/rmd_equations.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/reference/rmd_headings.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/reference/rmd_list.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/reference/rmd_remove_list.html</loc>
-  </url>
-  <url>
-    <loc>https://GegznaV.github.io/reference/rmd_tables.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://gegznav.github.io/addins.qmd/404.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/LICENSE-text.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/authors.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/cran-submission-checklist.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/index.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/news/index.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/reference/addins.qmd-package.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/reference/format_rmd.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/reference/index.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/reference/qmd_api_conventions.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/reference/qmd_code_block.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/reference/qmd_equations.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/reference/qmd_headings.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/reference/qmd_list.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/reference/qmd_remove_list.html</loc></url>
+<url><loc>https://gegznav.github.io/addins.qmd/reference/qmd_tables.html</loc></url>
 </urlset>
+
