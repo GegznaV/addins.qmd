@@ -14,10 +14,8 @@ Description: Package `addins.qmd` contains RStudio add-ins to format Quarto
 URL: https://gegznav.github.io/addins.qmd/
 BugReports: https://github.com/GegznaV/addins.qmd/issues
 License: MIT + file LICENSE
-LazyData: TRUE
 ByteCompile: TRUE
 Encoding: UTF-8
-VignetteBuilder: knitr
 Remotes:
     github::GegznaV/addin.tools
 Additional_repositories:
@@ -31,7 +29,6 @@ Imports:
     stringr,
     purrr
 Suggests:
-    knitr,
     quarto,
     testthat (>= 3.0.0)
 Roxygen: list(markdown = TRUE)
