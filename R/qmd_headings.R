@@ -1,6 +1,6 @@
-#' Format text as R Markdown headings.
+#' Format text as Quarto/Pandoc Markdown headings.
 #'
-#' RStudio add-ins to format text as R Markdown headings and to remove this formatting.
+#' RStudio add-ins to format text as Quarto/Pandoc Markdown headings and to remove this formatting.
 #'
 #' @details
 #' Function `qmd_heading_remove()` removes heading formatting:
