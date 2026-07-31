@@ -16,15 +16,15 @@
 # }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' Add-ins for basic R Markdown formatting.
+#' Add-ins for basic Quarto/Pandoc Markdown formatting.
 #'
 #' RStudio add-ins, which enclose selected text with symbols that have special
-#' interpretation in R Markdown.
+#' interpretation in Quarto/Pandoc Markdown.
 #'
 #' @inheritParams addin.tools::rs_get_index
 #'
 #' @name format_rmd
-#' @family R Markdown formatting add-ins
+#' @family Quarto formatting add-ins
 #'
 NULL
 
