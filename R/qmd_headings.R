@@ -25,81 +25,50 @@
 #'
 #' @name qmd_headings
 #' @export
-qmd_heading_1 <- function(context = rs_get_context()) {
+qmd_heading_hash <- function(symbol, command, context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownHeader1")) {
+    if (run_visual_editor_command(command)) {
       return(invisible(NULL))
     }
     return(invisible(NULL))
-  } else {
-    add_hash_style_heading("# ", context = context)
   }
+
+  add_hash_style_heading(symbol, context = context)
+}
+
+qmd_heading_1 <- function(context = rs_get_context()) {
+  qmd_heading_hash(symbol = "# ", command = "markdownHeader1", context = context)
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
 #' @export
 qmd_heading_2 <- function(context = rs_get_context()) {
-  if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownHeader2")) {
-      return(invisible(NULL))
-    }
-    return(invisible(NULL))
-  } else {
-    add_hash_style_heading("## ", context = context)
-  }
+  qmd_heading_hash(symbol = "## ", command = "markdownHeader2", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
 #' @export
 qmd_heading_3 <- function(context = rs_get_context()) {
-  if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownHeader3")) {
-      return(invisible(NULL))
-    }
-    return(invisible(NULL))
-  } else {
-    add_hash_style_heading("### ", context = context)
-  }
+  qmd_heading_hash(symbol = "### ", command = "markdownHeader3", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
 #' @export
 qmd_heading_4 <- function(context = rs_get_context()) {
-  if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownHeader4")) {
-      return(invisible(NULL))
-    }
-    return(invisible(NULL))
-  } else {
-    add_hash_style_heading("#### ", context = context)
-  }
+  qmd_heading_hash(symbol = "#### ", command = "markdownHeader4", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
 #' @export
 qmd_heading_5 <- function(context = rs_get_context()) {
-  if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownHeader5")) {
-      return(invisible(NULL))
-    }
-    return(invisible(NULL))
-  } else {
-    add_hash_style_heading("##### ", context = context)
-  }
+  qmd_heading_hash(symbol = "##### ", command = "markdownHeader5", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
 #' @export
 qmd_heading_6 <- function(context = rs_get_context()) {
-  if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownHeader6")) {
-      return(invisible(NULL))
-    }
-    return(invisible(NULL))
-  } else {
-    add_hash_style_heading("###### ", context = context)
-  }
+  qmd_heading_hash(symbol = "###### ", command = "markdownHeader6", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
