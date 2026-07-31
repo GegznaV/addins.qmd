@@ -16,3 +16,4 @@
 ^\.github$
 ^pkgdown-assets$
 ^ai-context\.qmd$
+^\.lintr$
