@@ -1,22 +1,18 @@
-url: https://GegznaV.github.io
-
-favicon: "favicon.png"
-
+url: https://gegznav.github.io/addins.qmd/
 template:
-  bootstrap: 3
-  params:
-    bootswatch: sandstone
+  bootstrap: 5
+  bootswatch: sandstone
+  light-switch: true
+  bslib:
+    primary: "#1b4332"     # Deep Dark Green
+    secondary: "#2d6a4f"   # Medium Sage
+    success: "#52b788"     # Soft Emerald
+    dark: "#2b2d42"        # Slate Dark
+    light: "#f4f6f0"       # Off-white / Cream
   assets: pkgdown-assets/
 
-navbar:
-  title: "addins.qmd | R package"
-  type: default
-  right:
-  - icon: fa-github fa-lg
-    href: https://github.com/GegznaV/addins.qmd
-  left:
-  - icon: fa-home fa-lg
-    href: index.html
-  - text: Functions
-    href: reference/index.html
+# Search settings
+search:
+  backend: docsearch
+
 
