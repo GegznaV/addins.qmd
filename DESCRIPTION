@@ -13,7 +13,7 @@ Description: Package `addins.qmd` contains RStudio add-ins to format Quarto
              documents. The main purpose of this package is to help beginners
              learn Quarto and Pandoc Markdown syntax faster and use keyboard
              shortcuts for common authoring elements.
-URL: https://gegznav.github.io/addins.qmd/
+URL: https://GegznaV.github.io, https://gegznav.github.io/addins.qmd/
 BugReports: https://github.com/GegznaV/addins.qmd/issues
 License: MIT + file LICENSE
 ByteCompile: TRUE
@@ -27,12 +27,13 @@ Depends:
     addin.tools (>= 0.0.11)
 Imports:
     crayon,
-    rstudioapi,
+    rstudioapi (>= 0.18.0),
     stringr,
     purrr
 Suggests:
     quarto,
     testthat (>= 3.0.0)
 Roxygen: list(markdown = TRUE)
-Config/roxygen2/version: 8.0.0
+Config/roxygen2/version: 7.3.3
 Config/testthat/edition: 3
+RoxygenNote: 7.3.3
