@@ -36,3 +36,6 @@ _tmp
 
 # Other
 docs/
+ai-context.qmd
+/.github/.extra
+/.github/.prompts
