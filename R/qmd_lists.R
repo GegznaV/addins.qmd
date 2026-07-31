@@ -109,58 +109,63 @@ qmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
   # rs_select_all_selected_rows(context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+qmd_list_wrap <- function(type, level = 1) {
+  qmd_list(type = type, level = level)
+}
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_list
 #' @export
 qmd_block_quotes <- function() {
-  qmd_list(">")
+  qmd_list_wrap(">")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_list
 #' @export
 qmd_line_blocks <- function() {
-  qmd_list("|")
+  qmd_list_wrap("|")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_list
 #' @export
 qmd_list_unordered <- function() {
-  qmd_list("-", level = 1)
+  qmd_list_wrap("-", level = 1)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_list
 #' @export
 qmd_list_unordered_2 <- function() {
-  qmd_list("+", level = 2)
+  qmd_list_wrap("+", level = 2)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_list
 #' @export
 qmd_list_numbered <- function() {
-  qmd_list("numbered", level = 1)
+  qmd_list_wrap("numbered", level = 1)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_list
 #' @export
 qmd_list_numbered_2 <- function() {
-  qmd_list("numbered", level = 2)
+  qmd_list_wrap("numbered", level = 2)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_list
 #' @export
 qmd_list_lettered <- function() {
-  qmd_list("lettered", level = 1)
+  qmd_list_wrap("lettered", level = 1)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_list
 #' @export
 qmd_list_lettered_2 <- function() {
-  qmd_list("lettered", level = 2)
+  qmd_list_wrap("lettered", level = 2)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_list
 #' @export
 qmd_list_z_example_list <- function() {
-  qmd_list("(@)")
+  qmd_list_wrap("(@)")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
