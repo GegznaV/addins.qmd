@@ -3,12 +3,15 @@
 
 <!-- badges: start -->
 
+<!-- [![CRAN_Status](https://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd) -->
+
 [![MIT
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CRAN_Status](https://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
 [![GitHub
 version](https://img.shields.io/badge/GitHub-0.0.1-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/GegznaV/addins.qmd/graph/badge.svg)](https://app.codecov.io/gh/GegznaV/addins.qmd)
 [![Updated-on](https://img.shields.io/badge/Updated%20on-2026--07--31-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
