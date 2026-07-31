@@ -4,9 +4,9 @@
 # 1. Ability to skip empty lines;
 # 2. Ability to continue numbering.
 
-#' Format text as R Markdown list.
+#' Format text as Quarto/Pandoc Markdown list.
 #'
-#' RStudio add-ins which formats text as R Markdown lists.
+#' RStudio add-ins which format text as Quarto/Pandoc Markdown lists.
 #' For the first-level lists: \itemize{
 #'   \item `qmd_list()` - the main function, that make lists;
 #'   \item `qmd_unordered_list()` - unordered list;
@@ -21,7 +21,7 @@
 #' @inheritParams addin.tools::rs_get_index
 #'
 #' @export
-#' @family R Markdown formatting add-ins
+#' @family Quarto formatting add-ins
 
 qmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) {
   if (is_visual_editor()) {
