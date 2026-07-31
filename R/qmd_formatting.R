@@ -74,6 +74,13 @@ qmd_format_italics <- function(context = rs_get_context()) {
 #' @rdname format_rmd
 #' @export
 qmd_format_bold_italics <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
+    if (run_visual_editor_command("markdownBold") &&
+      run_visual_editor_command("markdownItalic")) {
+      return(invisible(NULL))
+    }
+  }
+
   rs_enclose_selection_with(
     symbol_before = "**_", symbol_after = "_**",
     context = context
@@ -83,6 +90,12 @@ qmd_format_bold_italics <- function(context = rs_get_context()) {
 #' @rdname format_rmd
 #' @export
 qmd_format_bold2 <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
+    if (run_visual_editor_command("markdownBold")) {
+      return(invisible(NULL))
+    }
+  }
+
   rs_enclose_selection_with(
     symbol = "__",
     context = context
@@ -92,6 +105,12 @@ qmd_format_bold2 <- function(context = rs_get_context()) {
 #' @rdname format_rmd
 #' @export
 qmd_format_italics2 <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
+    if (run_visual_editor_command("markdownItalic")) {
+      return(invisible(NULL))
+    }
+  }
+
   rs_enclose_selection_with(
     symbol = "*",
     context = context
@@ -176,6 +195,12 @@ qmd_format_strikethrough <- function(context = rs_get_context()) {
 #' @rdname format_rmd
 #' @export
 qmd_format_footnote <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
+    if (run_visual_editor_command("markdownFootnote")) {
+      return(invisible(NULL))
+    }
+  }
+
   rs_enclose_selection_with(
     symbol_before = "^[", symbol_after = "]",
     context = context
