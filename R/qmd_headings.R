@@ -24,7 +24,7 @@
 #' @inheritParams addin.tools::rs_get_index
 #'
 #' @name qmd_headings
-#' @export
+#' @keywords internal
 qmd_heading_hash <- function(symbol, command, context = rs_get_context()) {
   if (is_visual_editor()) {
     if (run_visual_editor_command(command)) {
@@ -36,6 +36,8 @@ qmd_heading_hash <- function(symbol, command, context = rs_get_context()) {
   add_hash_style_heading(symbol, context = context)
 }
 
+#' @rdname qmd_headings
+#' @export
 qmd_heading_1 <- function(context = rs_get_context()) {
   qmd_heading_hash(symbol = "# ", command = "markdownHeader1", context = context)
 }
