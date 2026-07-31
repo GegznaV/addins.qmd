@@ -14,9 +14,9 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addins.rmd)](https://cran.r-project.org/package=addins.rmd)
-[![GitHub version](https://img.shields.io/badge/GitHub-`r packageVersion("addins.rmd")`-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
-[![R-CMD-check](https://github.com/GegznaV/addins.rmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.rmd/actions)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
+[![GitHub version](https://img.shields.io/badge/GitHub-`r packageVersion("addins.qmd")`-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
+[![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
 [![Updated-on](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
@@ -25,17 +25,17 @@ knitr::opts_chunk$set(
 
 <!-- 
 ```{r, fig.align='center', out.height='30%', out.width='30%', echo=FALSE, eval = FALSE}
-# knitr::include_graphics("http://gegznav.github.io/addins.rmd/logo.png")
+# knitr::include_graphics("http://gegznav.github.io/addins.qmd/logo.png")
 ``` 
 -->
 
 
-<img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>
+<img src="http://gegznav.github.io/addins.qmd/logo.png" align="right" width="15%" height="15%"/>
 
 
-# R package **addins.rmd**  
+# R package **addins.qmd**  
 
-Package `addins.rmd` is an *R* package that provides a set of *RStudio* add-ins for *R Markdown*. The main purpose of this package is to alleviate learning process of *R Markdown* syntax. 
+Package `addins.qmd` is an *R* package that provides a set of *RStudio* add-ins for *R Markdown*. The main purpose of this package is to alleviate learning process of *R Markdown* syntax. 
 
 <!-- 
 
@@ -56,7 +56,7 @@ Install package from CRAN-like repository:
 
 ```{r Install package from CRAN, eval=FALSE}
 repos <- c("https://mokymai.github.io/download/", getOption("repos"))
-install.packages("addins.rmd", repos = repos)
+install.packages("addins.qmd", repos = repos)
 ```
 
 
@@ -71,7 +71,7 @@ if (!require(remotes)) {
 }
 
 remotes::install_github("GegznaV/addin.tools")
-remotes::install_github("GegznaV/addins.rmd")
+remotes::install_github("GegznaV/addins.qmd")
 ```
 </details>
 
@@ -82,26 +82,26 @@ remotes::install_github("GegznaV/addins.rmd")
 Recommended workflow and a few examples
 -----------------------------------------------------
 
-Get started online http://gegznav.github.io/addins.rmd/articles/v1_workflow.html
+Get started online http://gegznav.github.io/addins.qmd/articles/v1_workflow.html
 
 And offline:
 ```{r, eval=FALSE}
-vignette("v1_workflow", package = "addins.rmd")
+vignette("v1_workflow", package = "addins.qmd")
 ```
-browseVignettes("addins.rmd") 
+browseVignettes("addins.qmd") 
 -->
 
 
 For the current version of the package:
 
 1) Find and click *RStudio* "Addins" button;
-2) Type **`{Rmd}`** in the add-ins search box;
-3) All the add-ins of the package **addins.rmd** will be displayed in the drop-down list below.
+2) Type **`{md}`** in the add-ins search box;
+3) All the add-ins of the package **addins.qmd** will be displayed in the drop-down list below.
 
 ```{r steps-search-addins, echo=FALSE, fig.cap=CAPTION, out.width=400}
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/steps-search-addins.png")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/steps-search-addins.png")
 
-CAPTION <- "**Fig. 1.** Steps to find addins of the package **addins.rmd**.  "
+CAPTION <- "**Fig. 1.** Steps to find addins of the package **addins.qmd**.  "
 ```
 
 Below you can find a few examples how to use the add-ins of the package.
@@ -114,7 +114,7 @@ CAPTION <- "**Fig. 2.** **Demonstration 1: headings.**
 Place a cursor with a mouse and use a necessary add-in.
 *(In this demonstrations, older version of the package is used.)*"
 
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-headings-1.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-headings-1.gif")
 ```
 
 <br>
@@ -122,7 +122,7 @@ knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-headings
 ```{r fig-ID-2, echo=FALSE, fig.cap=CAPTION, out.width=600}
 CAPTION <- "**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  "
 
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-headings-2.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-headings-2.gif")
 ```
 
 
@@ -133,7 +133,7 @@ CAPTION <- "**Fig. 4.** **Demonstration 3: basic formatting.**
 Before using this type of add-in, select a piece of text that should be formatted.
 *(In this demonstrations, older version of the package is used.)*  "
 
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-formatting-1.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-formatting-1.gif")
 ```
 
 
@@ -145,7 +145,7 @@ The lists can be numbered and unnumbered.
 They can have several levels.
 *(In this demonstrations, older version of the package is used.)*  "
 
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-lists-1.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-lists-1.gif")
 ```
 
 
@@ -155,7 +155,7 @@ knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-lists-1.
 CAPTION <- "**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  "
 
-knitr::include_graphics("https://gegznav.github.io/addins.rmd/figs/demo-chunk-add-1.gif")
+knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-chunk-add-1.gif")
 ```
 
 
@@ -179,4 +179,4 @@ If you need more advanced formatting options, please, read more at:
 
 ***
 
-Online docuentation at http://gegznav.github.io/addins.rmd/
+Online docuentation at http://gegznav.github.io/addins.qmd/

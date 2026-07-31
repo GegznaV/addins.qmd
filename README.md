@@ -4,10 +4,10 @@
 
 [![MIT
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addins.rmd)](https://cran.r-project.org/package=addins.rmd)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
 [![GitHub
-version](https://img.shields.io/badge/GitHub-0.0.13-brightgreen.svg)](https://github.com/GegznaV/addins.rmd)
-[![R-CMD-check](https://github.com/GegznaV/addins.rmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.rmd/actions)
+version](https://img.shields.io/badge/GitHub-0.0.13-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
+[![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
 [![Updated-on](https://img.shields.io/badge/Updated%20on-2022--07--28-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
@@ -17,11 +17,11 @@ version](https://img.shields.io/badge/GitHub-0.0.13-brightgreen.svg)](https://gi
 
 -->
 
-<img src="http://gegznav.github.io/addins.rmd/logo.png" align="right" width="15%" height="15%"/>
+<img src="http://gegznav.github.io/addins.qmd/logo.png" align="right" width="15%" height="15%"/>
 
-# R package **addins.rmd**
+# R package **addins.qmd**
 
-Package `addins.rmd` is an *R* package that provides a set of *RStudio*
+Package `addins.qmd` is an *R* package that provides a set of *RStudio*
 add-ins for *R Markdown*. The main purpose of this package is to
 alleviate learning process of *R Markdown* syntax.
 
@@ -43,7 +43,7 @@ Install package from CRAN-like repository:
 
 ``` r
 repos <- c("https://mokymai.github.io/download/", getOption("repos"))
-install.packages("addins.rmd", repos = repos)
+install.packages("addins.qmd", repos = repos)
 ```
 
 <details>
@@ -59,7 +59,7 @@ if (!require(remotes)) {
 }
 
 remotes::install_github("GegznaV/addin.tools")
-remotes::install_github("GegznaV/addins.rmd")
+remotes::install_github("GegznaV/addins.qmd")
 ```
 
 </details>
@@ -70,30 +70,30 @@ remotes::install_github("GegznaV/addins.rmd")
 Recommended workflow and a few examples
 -----------------------------------------------------
 
-Get started online http://gegznav.github.io/addins.rmd/articles/v1_workflow.html
+Get started online http://gegznav.github.io/addins.qmd/articles/v1_workflow.html
 
 And offline:
 
 ```r
-vignette("v1_workflow", package = "addins.rmd")
+vignette("v1_workflow", package = "addins.qmd")
 ```
-browseVignettes("addins.rmd") 
+browseVignettes("addins.qmd") 
 -->
 
 For the current version of the package:
 
 1)  Find and click *RStudio* “Addins” button;
-2)  Type **`{Rmd}`** in the add-ins search box;
-3)  All the add-ins of the package **addins.rmd** will be displayed in
+2)  Type **`{md}`** in the add-ins search box;
+3)  All the add-ins of the package **addins.qmd** will be displayed in
     the drop-down list below.
 
-<img src="https://gegznav.github.io/addins.rmd/figs/steps-search-addins.png" title="**Fig. 1.** Steps to find addins of the package **addins.rmd**.  " alt="**Fig. 1.** Steps to find addins of the package **addins.rmd**.  " width="400" />
+<img src="https://gegznav.github.io/addins.qmd/figs/steps-search-addins.png" title="**Fig. 1.** Steps to find addins of the package **addins.qmd**.  " alt="**Fig. 1.** Steps to find addins of the package **addins.qmd**.  " width="400" />
 
 Below you can find a few examples how to use the add-ins of the package.
 
 ## Convert Text into Headings
 
-<img src="https://gegznav.github.io/addins.rmd/figs/demo-headings-1.gif" title="**Fig. 2.** **Demonstration 1: headings.**
+<img src="https://gegznav.github.io/addins.qmd/figs/demo-headings-1.gif" title="**Fig. 2.** **Demonstration 1: headings.**
 Place a cursor with a mouse and use a necessary add-in.
 *(In this demonstrations, older version of the package is used.)*" alt="**Fig. 2.** **Demonstration 1: headings.**
 Place a cursor with a mouse and use a necessary add-in.
@@ -101,11 +101,11 @@ Place a cursor with a mouse and use a necessary add-in.
 
 <br>
 
-<img src="https://gegznav.github.io/addins.rmd/figs/demo-headings-2.gif" title="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="600" />
+<img src="https://gegznav.github.io/addins.qmd/figs/demo-headings-2.gif" title="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="600" />
 
 ## Basic Text Formatting
 
-<img src="https://gegznav.github.io/addins.rmd/figs/demo-formatting-1.gif" title="**Fig. 4.** **Demonstration 3: basic formatting.**
+<img src="https://gegznav.github.io/addins.qmd/figs/demo-formatting-1.gif" title="**Fig. 4.** **Demonstration 3: basic formatting.**
 Before using this type of add-in, select a piece of text that should be formatted.
 *(In this demonstrations, older version of the package is used.)*  " alt="**Fig. 4.** **Demonstration 3: basic formatting.**
 Before using this type of add-in, select a piece of text that should be formatted.
@@ -113,7 +113,7 @@ Before using this type of add-in, select a piece of text that should be formatte
 
 ## Create Lists
 
-<img src="https://gegznav.github.io/addins.rmd/figs/demo-lists-1.gif" title="**Fig. 5.** **Demonstration 4: lists.**
+<img src="https://gegznav.github.io/addins.qmd/figs/demo-lists-1.gif" title="**Fig. 5.** **Demonstration 4: lists.**
 The lists can be numbered and unnumbered.
 They can have several levels.
 *(In this demonstrations, older version of the package is used.)*  " alt="**Fig. 5.** **Demonstration 4: lists.**
@@ -123,7 +123,7 @@ They can have several levels.
 
 ## Create R Code Chunks
 
-<img src="https://gegznav.github.io/addins.rmd/figs/demo-chunk-add-1.gif" title="**Fig. 6.** **Demonstration 5: R code chunks.**
+<img src="https://gegznav.github.io/addins.qmd/figs/demo-chunk-add-1.gif" title="**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " alt="**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " width="600" />
 
@@ -148,4 +148,4 @@ more advanced formatting options, please, read more at:
 
 ------------------------------------------------------------------------
 
-Online docuentation at <http://gegznav.github.io/addins.rmd/>
+Online docuentation at <http://gegznav.github.io/addins.qmd/>

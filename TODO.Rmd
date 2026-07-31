@@ -29,7 +29,7 @@ CAPTION = "The_caption_of_your_figure_comes_here..."
 
 7. Add possibility not to add list bullets and numbers to the empty rows.
 
-8. FIXME: rmd_remove_list() does not remove this list correctly in this situation:
+8. FIXME: qmd_remove_list() does not remove this list correctly in this situation:
 ```
 - 1.
 - 2.
@@ -38,12 +38,12 @@ CAPTION = "The_caption_of_your_figure_comes_here..."
 - 5.
 ```
 
-9.  rmd_list() add:
+9.  qmd_list() add:
      1. Ability to skip empty lines;
      2. Ability to continue numbering.
      
 
-10. add_hash_style_heading(), rmd_heading_remove()
+10. add_hash_style_heading(), qmd_heading_remove()
 Application of "insert H1" addin in a row results in removed rows only on seccond time:
 ```
           1

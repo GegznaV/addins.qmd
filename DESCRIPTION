@@ -1,24 +1,23 @@
-Package: addins.rmd
+Package: addins.qmd
 Type: Package
 Title: RStudio Add-ins to Format R Markdown Documents
-Version: 0.0.14
+Version: 0.0.1
 Date: 2022-08-03  
 Authors@R: person("Vilmantas", "Gegzna",
                   email = "GegznaV@gmail.com",
                   role = c("aut", "cre","cph")
             )
-Description: Package `addins.rmd` contains RStudio add-ins to format R Markdown
+Description: Package `addins.qmd` contains RStudio add-ins to format R Markdown
              documents. The main purpose of this package is to help begginers
              to learn R Markwown syntax faster. As well as to create possibility
              to use keyboard shortcuts for the most common R Markdown syntax
              elements.
-URL: http://gegznav.github.io/addins.rmd/
-BugReports: https://github.com/GegznaV/addins.rmd/issues
+URL: http://gegznav.github.io/addins.qmd/
+BugReports: https://github.com/GegznaV/addins.qmd/issues
 License: MIT + file LICENSE
 LazyData: TRUE
 ByteCompile: TRUE
 Encoding: UTF-8
-RoxygenNote: 7.2.1
 VignetteBuilder: knitr
 Remotes:
     github::GegznaV/addin.tools
@@ -36,3 +35,4 @@ Suggests:
     knitr,
     rmarkdown
 Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.0.0

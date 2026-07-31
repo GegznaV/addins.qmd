@@ -3,13 +3,13 @@
 #' RStudio add-ins to format text as R Markdown headings and to remove this formatting.
 #'
 #' @details
-#' Function `rmd_heading_remove()` removes heading formatting:
+#' Function `qmd_heading_remove()` removes heading formatting:
 #' either hash-symbol-style headings (i.e., remove leading hash symbols `#`
 #' and spaces), or
 #' underline-style headings in the first selected row. \cr
 #'
-#' The other functions, which name beginns with `rmd_heading_`, at first
-#' apply `rmd_heading_remove()` to remove heading style (leading hash
+#' The other functions, which name beginns with `qmd_heading_`, at first
+#' apply `qmd_heading_remove()` to remove heading style (leading hash
 #' symbols and underline) and then format the first selected row as a heading
 #' of an appropriate level.
 #'
@@ -23,10 +23,10 @@
 #'
 #' @inheritParams addin.tools::rs_get_index
 #'
-#' @name rmd_headings
+#' @name qmd_headings
 #' @export
-rmd_heading_1 <- function(context = rs_get_context()) {
-  if (is_rmd_visual_mode()) {
+qmd_heading_1 <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
     return()
   } else {
     add_hash_style_heading("# ", context = context)
@@ -34,76 +34,76 @@ rmd_heading_1 <- function(context = rs_get_context()) {
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_headings
+#' @rdname qmd_headings
 #' @export
-rmd_heading_2 <- function(context = rs_get_context()) {
-  if (is_rmd_visual_mode()) {
+qmd_heading_2 <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
     return()
   } else {
     add_hash_style_heading("## ", context = context)
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_headings
+#' @rdname qmd_headings
 #' @export
-rmd_heading_3 <- function(context = rs_get_context()) {
-  if (is_rmd_visual_mode()) {
+qmd_heading_3 <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
     return()
   } else {
     add_hash_style_heading("### ", context = context)
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_headings
+#' @rdname qmd_headings
 #' @export
-rmd_heading_4 <- function(context = rs_get_context()) {
-  if (is_rmd_visual_mode()) {
+qmd_heading_4 <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
     return()
   } else {
     add_hash_style_heading("#### ", context = context)
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_headings
+#' @rdname qmd_headings
 #' @export
-rmd_heading_5 <- function(context = rs_get_context()) {
-  if (is_rmd_visual_mode()) {
+qmd_heading_5 <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
     return()
   } else {
     add_hash_style_heading("##### ", context = context)
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_headings
+#' @rdname qmd_headings
 #' @export
-rmd_heading_6 <- function(context = rs_get_context()) {
-  if (is_rmd_visual_mode()) {
+qmd_heading_6 <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
     return()
   } else {
     add_hash_style_heading("###### ", context = context)
   }
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_headings
+#' @rdname qmd_headings
 #' @export
-rmd_heading_1_title <- function(context = rs_get_context()) {
+qmd_heading_1_title <- function(context = rs_get_context()) {
   add_underline_style_heading("=", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_headings
+#' @rdname qmd_headings
 #' @export
-rmd_heading_2_subtitle <- function(context = rs_get_context()) {
+qmd_heading_2_subtitle <- function(context = rs_get_context()) {
   add_underline_style_heading("-", context = context)
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_headings
+#' @rdname qmd_headings
 #' @export
-rmd_heading_remove <- function(style = c("auto", "both", "hash", "underline"),
+qmd_heading_remove <- function(style = c("auto", "both", "hash", "underline"),
   context = rs_get_context()) {
 
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  if (is_rmd_visual_mode()) {
+  if (is_visual_editor()) {
     rstudioapi::sendToConsole(
       'warning("This addin does not work in Markdown Visual Editor (VME) mode. ")',
       execute = TRUE,
@@ -135,17 +135,17 @@ rmd_heading_remove <- function(style = c("auto", "both", "hash", "underline"),
 }
 
 # ============================================================================
-rmd_heading_remove_underline <- function(context = rs_get_context()) {
-  rmd_heading_remove("underline", context = context)
+qmd_heading_remove_underline <- function(context = rs_get_context()) {
+  qmd_heading_remove("underline", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-rmd_heading_remove_hash_style <- function(context = rs_get_context()) {
-  rmd_heading_remove("hash", context = context)
+qmd_heading_remove_hash_style <- function(context = rs_get_context()) {
+  qmd_heading_remove("hash", context = context)
 }
 # ============================================================================
 add_underline_style_heading <- function(symbol = "=", context = rs_get_context()) {
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  if (is_rmd_visual_mode()) {
+  if (is_visual_editor()) {
     rstudioapi::sendToConsole(
       'warning("This addin does not work in Markdown Visual Editor (VME) mode. ")',
       execute = TRUE,
@@ -159,7 +159,7 @@ add_underline_style_heading <- function(symbol = "=", context = rs_get_context()
   len <- nchar(rs_get_first_selected_row(context = context))
   len <- max(3, len + 1)
   text <- repeat_symbol(symbol, len)
-  rmd_heading_remove(style = "underline", context = context)
+  qmd_heading_remove(style = "underline", context = context)
   rs_enclose_first_row_with(
     text_below = text,
     ensure_blank_above = TRUE,
@@ -190,7 +190,7 @@ rm_underline_style_heading <- function(row, context, detected) {
 }
 # ============================================================================
 add_hash_style_heading <- function(symbol = "# ", context = rs_get_context()) {
-  rmd_heading_remove(style = "both", context = context)
+  qmd_heading_remove(style = "both", context = context)
   if (nchar(symbol) > 0) {
     rs_insert_before_first_selected_row(symbol,
       ensure_blank_above = TRUE,
@@ -210,23 +210,23 @@ rm_hash_style_heading <- function(row, context) {
   rstudioapi::modifyRange(first_selected_row, text1, id = context$id)
 }
 # ============================================================================
-rmd_heading_level_down <- function(context = rs_get_context()) {
-  if (is_rmd_visual_mode()) {
+qmd_heading_level_down <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
     return()
   } else {
-    rmd_heading_level_change("down", context = context)
+    qmd_heading_level_change("down", context = context)
   }
 }
 
-rmd_heading_level_up <- function(context = rs_get_context()) {
-  if (is_rmd_visual_mode()) {
+qmd_heading_level_up <- function(context = rs_get_context()) {
+  if (is_visual_editor()) {
     return()
   } else {
-    rmd_heading_level_change("up", context = context)
+    qmd_heading_level_change("up", context = context)
   }
 }
 
-rmd_heading_level_change <- function(direction, context = rs_get_context()) {
+qmd_heading_level_change <- function(direction, context = rs_get_context()) {
   row_txt <- rs_get_first_selected_row(context)
   level <- nchar(stringr::str_extract(row_txt, "^#*"))
 

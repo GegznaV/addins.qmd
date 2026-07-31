@@ -1,6 +1,6 @@
 # TODO: rewrite the functions for Visual Markdown Editor mode.
 
-# TODO: rmd_list() add:
+# TODO: qmd_list() add:
 # 1. Ability to skip empty lines;
 # 2. Ability to continue numbering.
 
@@ -8,11 +8,11 @@
 #'
 #' RStudio add-ins which formats text as R Markdown lists.
 #' For the first-level lists: \itemize{
-#'   \item `rmd_list()` - the main function, that make lists;
-#'   \item `rmd_unordered_list()` - unordered list;
-#'   \item `rmd_numbered_list()` - numbered list;
-#'   \item `rmd_lettered_list()` - lettered list (non-capital English letters);
-#'   \item `rmd_master_list()` - master list (which numbering continues throughout the document).
+#'   \item `qmd_list()` - the main function, that make lists;
+#'   \item `qmd_unordered_list()` - unordered list;
+#'   \item `qmd_numbered_list()` - numbered list;
+#'   \item `qmd_lettered_list()` - lettered list (non-capital English letters);
+#'   \item `qmd_master_list()` - master list (which numbering continues throughout the document).
 #'   }
 #'
 #' @param type (character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master", or list like elements "block quotes" and "line blocks".
@@ -23,11 +23,11 @@
 #' @export
 #' @family R Markdown formatting add-ins
 
-rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) {
-  if (is_rmd_visual_mode()) {
+qmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) {
+  if (is_visual_editor()) {
     rstudioapi::sendToConsole(
       'warning(
-        "List-related package `addins.rmd` addins do not work in ",
+        "List-related package `addins.qmd` addins do not work in ",
         "Markdown Visual Editor (VME) mode. \n",
         "Use related VME functionality instead."
       )',
@@ -95,58 +95,58 @@ rmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
   # rs_select_all_selected_rows(context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_list
+#' @rdname qmd_list
 #' @export
-rmd_block_quotes <- function() {
-  rmd_list(">")
+qmd_block_quotes <- function() {
+  qmd_list(">")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_list
+#' @rdname qmd_list
 #' @export
-rmd_line_blocks <- function() {
-  rmd_list("|")
+qmd_line_blocks <- function() {
+  qmd_list("|")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_list
+#' @rdname qmd_list
 #' @export
-rmd_list_unordered <- function() {
-  rmd_list("-", level = 1)
+qmd_list_unordered <- function() {
+  qmd_list("-", level = 1)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_list
+#' @rdname qmd_list
 #' @export
-rmd_list_unordered_2 <- function() {
-  rmd_list("+", level = 2)
+qmd_list_unordered_2 <- function() {
+  qmd_list("+", level = 2)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_list
+#' @rdname qmd_list
 #' @export
-rmd_list_numbered <- function() {
-  rmd_list("numbered", level = 1)
+qmd_list_numbered <- function() {
+  qmd_list("numbered", level = 1)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_list
+#' @rdname qmd_list
 #' @export
-rmd_list_numbered_2 <- function() {
-  rmd_list("numbered", level = 2)
+qmd_list_numbered_2 <- function() {
+  qmd_list("numbered", level = 2)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_list
+#' @rdname qmd_list
 #' @export
-rmd_list_lettered <- function() {
-  rmd_list("lettered", level = 1)
+qmd_list_lettered <- function() {
+  qmd_list("lettered", level = 1)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_list
+#' @rdname qmd_list
 #' @export
-rmd_list_lettered_2 <- function() {
-  rmd_list("lettered", level = 2)
+qmd_list_lettered_2 <- function() {
+  qmd_list("lettered", level = 2)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname rmd_list
+#' @rdname qmd_list
 #' @export
-rmd_list_z_example_list <- function() {
-  rmd_list("(@)")
+qmd_list_z_example_list <- function() {
+  qmd_list("(@)")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -167,7 +167,7 @@ rmd_list_z_example_list <- function() {
 # - 4.
 # - 5.
 
-rmd_remove_list <- function(context = rs_get_context()) {
+qmd_remove_list <- function(context = rs_get_context()) {
   # Roman numbers (capital and small)
   rom_c <- "(M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3}))"
   rom_s <- "(m{0,4}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3}))"
