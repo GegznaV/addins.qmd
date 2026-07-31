@@ -98,13 +98,28 @@ test_that("visual editor command path is used for supported wrappers", {
 
   qmd_format_bold(context = ctx)
   qmd_format_italics(context = ctx)
+  qmd_format_bold2(context = ctx)
+  qmd_format_italics2(context = ctx)
+  qmd_format_bold_italics(context = ctx)
   qmd_code_inline(context = ctx)
   qmd_format_strikethrough(context = ctx)
   qmd_link_url(context = ctx)
+  qmd_format_footnote(context = ctx)
 
   expect_identical(
     commands,
-    c("markdownBold", "markdownItalic", "markdownCode", "markdownStrikethrough", "markdownLink")
+    c(
+      "markdownBold",
+      "markdownItalic",
+      "markdownBold",
+      "markdownItalic",
+      "markdownBold",
+      "markdownItalic",
+      "markdownCode",
+      "markdownStrikethrough",
+      "markdownLink",
+      "markdownFootnote"
+    )
   )
   expect_false(used_fallback)
 })
@@ -125,6 +140,12 @@ test_that("visual editor command path falls back when command is unavailable", {
 
   qmd_format_bold(context = ctx)
   expect_identical(call$symbol, "**")
+  expect_identical(call$context, ctx)
+
+  call <- NULL
+  qmd_format_footnote(context = ctx)
+  expect_identical(call$symbol_before, "^[")
+  expect_identical(call$symbol_after, "]")
   expect_identical(call$context, ctx)
 })
 
