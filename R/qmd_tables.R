@@ -2,8 +2,8 @@
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @name qmd_tables
-#' @title Insert R Markdown tables
-#' @description Insert examples of R Markdown tables.
+#' @title Insert Quarto/Pandoc Markdown tables
+#' @description Insert examples of Quarto/Pandoc Markdown tables.
 #' @inheritParams addin.tools::rs_get_index
 
 NULL
