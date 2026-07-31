@@ -1,10 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
 <!-- badges: start -->
 
 [![MIT
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
+[![CRAN_Status](https://www.r-pkg.org/badges/version/addins.qmd)](https://cran.r-project.org/package=addins.qmd)
 [![GitHub
 version](https://img.shields.io/badge/GitHub-0.0.1-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
@@ -12,29 +13,11 @@ version](https://img.shields.io/badge/GitHub-0.0.1-brightgreen.svg)](https://git
 
 ------------------------------------------------------------------------
 
-<!-- 
-
--->
-
-<img src="https://gegznav.github.io/addins.qmd/logo.png" alt="addins.qmd logo" align="right" width="15%" height="15%"/>
-
-# R package **addins.qmd**
+# R package **addins.qmd** <img src="man/figures/logo.png" align="right" height="136" alt="" />
 
 Package `addins.qmd` is an *R* package that provides a set of *RStudio*
 add-ins for *Quarto* documents. The main purpose of this package is to
 make learning Quarto and Pandoc Markdown syntax faster.
-
-<!-- 
-
-1) **format text in Quarto documents**:
-  - **enclose** either selected text or selected rows with special symbols and text gets interpreted in a special way when rendered with Quarto/Pandoc Markdown (e.g., converts "bold" into "\*\*bold\*\*"
-that is interpreted as "**bold**").
-2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position;
-3)  **replace** symbols in selected
-pieces of text (e.g., convert backslashes to forward slashes which results
-in strings like `"c:\data\"` converted into `"c:/data/"`).
-
--->
 
 ## Install Package
 
@@ -46,7 +29,9 @@ install.packages("addins.qmd", repos = repos)
 ```
 
 <details>
+
 <summary>
+
 Install from GitHub
 </summary>
 
@@ -65,31 +50,18 @@ remotes::install_github("GegznaV/addins.qmd")
 
 # How to Use These Add-ins
 
-<!-- 
-Recommended workflow and a few examples
------------------------------------------------------
-
-Get started online http://gegznav.github.io/addins.qmd/articles/v1_workflow.html
-
-And offline:
-
-``` r
-vignette("v1_workflow", package = "addins.qmd")
-```
-browseVignettes("addins.qmd") 
--->
-
 For the current version of the package:
 
-1.  Find and click *RStudio* “Addins” button;
-2.  Type **`{qmd}`** in the add-ins search box;
-3.  All the add-ins of the package **addins.qmd** will be displayed in
+1)  Find and click *RStudio* “Addins” button;
+2)  Type **`{qmd}`** in the add-ins search box;
+3)  All the add-ins of the package **addins.qmd** will be displayed in
     the drop-down list below.
 
 <div class="figure">
 
 <img src="https://gegznav.github.io/addins.qmd/figs/steps-search-addins.png" alt="**Fig. 1.** Steps to find addins of the package **addins.qmd**.  " width="400" />
 <p class="caption">
+
 **Fig. 1.** Steps to find addins of the package **addins.qmd**.
 </p>
 
@@ -105,6 +77,7 @@ Below you can find a few examples how to use the add-ins of the package.
 Place a cursor with a mouse and use a necessary add-in.
 *(In this demonstration, older version of the package is used.)*" width="600" />
 <p class="caption">
+
 **Fig. 2.** **Demonstration 1: headings.** Place a cursor with a mouse
 and use a necessary add-in. *(In this demonstration, older version of
 the package is used.)*
@@ -118,6 +91,7 @@ the package is used.)*
 
 <img src="https://gegznav.github.io/addins.qmd/figs/demo-headings-2.gif" alt="**Fig. 3.** Demonstration 2: headings.** Notice that, if needed, a blank line above the selection is added.  " width="600" />
 <p class="caption">
+
 **Fig. 3.** Demonstration 2: headings.\*\* Notice that, if needed, a
 blank line above the selection is added.
 </p>
@@ -132,6 +106,7 @@ blank line above the selection is added.
 Before using this type of add-in, select a piece of text that should be formatted.
 *(In this demonstration, older version of the package is used.)*  " width="600" />
 <p class="caption">
+
 **Fig. 4.** **Demonstration 3: basic formatting.** Before using this
 type of add-in, select a piece of text that should be formatted. *(In
 this demonstration, older version of the package is used.)*
@@ -148,6 +123,7 @@ The lists can be numbered and unnumbered.
 They can have several levels.
 *(In this demonstration, older version of the package is used.)*  " width="600" />
 <p class="caption">
+
 **Fig. 5.** **Demonstration 4: lists.** The lists can be numbered and
 unnumbered. They can have several levels. *(In this demonstration, older
 version of the package is used.)*
@@ -162,6 +138,7 @@ version of the package is used.)*
 <img src="https://gegznav.github.io/addins.qmd/figs/demo-chunk-add-1.gif" alt="**Fig. 6.** **Demonstration 5: R code chunks.**
 Select one or several lines with code, select an appropriate add-in and include code into a chunk.  " width="600" />
 <p class="caption">
+
 **Fig. 6.** **Demonstration 5: R code chunks.** Select one or several
 lines with code, select an appropriate add-in and include code into a
 chunk.
@@ -180,15 +157,15 @@ Visual Editor command.
 
 ## API Surface Conventions
 
--   Exported functions with the `qmd_` prefix are the supported
-    user-facing addins.
--   Some addin bindings intentionally target non-exported functions for
-    RStudio addin dispatch compatibility.
--   Non-exported helper functions are internal and may change between
-    releases.
--   Visual Editor command support is implemented incrementally and falls
-    back to source-mode behavior or warnings when commands are
-    unavailable.
+- Exported functions with the `qmd_` prefix are the supported
+  user-facing addins.
+- Some addin bindings intentionally target non-exported functions for
+  RStudio addin dispatch compatibility.
+- Non-exported helper functions are internal and may change between
+  releases.
+- Visual Editor command support is implemented incrementally and falls
+  back to source-mode behavior or warnings when commands are
+  unavailable.
 
 # See Also
 
@@ -206,7 +183,8 @@ how to use them in combination with user-defined keyboard shortcuts:
 Quarto markdown is based on Pandoc’s Markdown syntax. If you need more
 advanced formatting options, please, read more at:
 
--   <https://pandoc.org/MANUAL.html#pandocs-markdown>
+- <a href="https://pandoc.org/MANUAL.html#pandocs-markdown"
+  target="_blank">https://pandoc.org/MANUAL.html#pandocs-markdown</a>
 
 ------------------------------------------------------------------------
 
