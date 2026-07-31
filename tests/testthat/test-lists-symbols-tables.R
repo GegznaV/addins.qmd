@@ -1,5 +1,5 @@
 test_that("symbol helpers insert escaped symbols with no spaces", {
-  ctx <- list(id = "doc-id")
+  ctx <- fixture_context()
   calls <- list()
 
   local_mocked_bindings(
@@ -69,10 +69,7 @@ test_that("qmd_list warns when visual editor command is unavailable", {
 })
 
 test_that("qmd_list prefixes selected rows and inserts optional blank line", {
-  context <- list(
-    id = "doc-id",
-    selection = list(list(range = list(start = c(row = 2), end = c(row = 4))))
-  )
+  context <- fixture_context(start_row = 2, end_row = 4)
 
   inserts <- list()
 
@@ -97,10 +94,7 @@ test_that("qmd_list prefixes selected rows and inserts optional blank line", {
 })
 
 test_that("qmd_list rejects unknown type", {
-  context <- list(
-    id = "doc-id",
-    selection = list(list(range = list(start = c(row = 1), end = c(row = 1))))
-  )
+  context <- fixture_context(start_row = 1)
 
   local_mocked_bindings(
     is_visual_editor = function() FALSE,
@@ -143,15 +137,13 @@ test_that("list convenience wrappers delegate expected type/level", {
 })
 
 test_that("qmd_remove_list strips list markup and updates selected range", {
-  context <- list(id = "doc-id")
+  context <- fixture_context()
   modified <- NULL
   selected <- FALSE
 
   local_mocked_bindings(
     rs_get_selected_rows = function(context) {
-      x <- c("- item one", "2. item two")
-      attr(x, "row_numbers") <- c(3, 4)
-      x
+      fixture_selected_rows(c("- item one", "2. item two"), c(3, 4))
     },
     rs_select_all_selected_rows = function(context) {
       selected <<- TRUE
@@ -177,14 +169,12 @@ test_that("qmd_remove_list strips list markup and updates selected range", {
 })
 
 test_that("qmd_remove_list strips stacked list markers in one pass", {
-  context <- list(id = "doc-id")
+  context <- fixture_context()
   modified <- NULL
 
   local_mocked_bindings(
     rs_get_selected_rows = function(context) {
-      x <- c("- 1. item one", "- 2.", "> 3) item three")
-      attr(x, "row_numbers") <- c(8, 10)
-      x
+      fixture_selected_rows(c("- 1. item one", "- 2.", "> 3) item three"), c(8, 10))
     },
     rs_select_all_selected_rows = function(context) invisible(NULL),
     .package = "addins.qmd"
@@ -206,15 +196,13 @@ test_that("qmd_remove_list strips stacked list markers in one pass", {
 })
 
 test_that("qmd_remove_list keeps selection when no replacement is needed", {
-  context <- list(id = "doc-id")
+  context <- fixture_context()
   modified <- FALSE
   selected <- FALSE
 
   local_mocked_bindings(
     rs_get_selected_rows = function(context) {
-      x <- c("plain one", "plain two")
-      attr(x, "row_numbers") <- c(1, 2)
-      x
+      fixture_selected_rows(c("plain one", "plain two"), c(1, 2))
     },
     rs_select_all_selected_rows = function(context) {
       selected <<- TRUE
@@ -239,7 +227,7 @@ test_that("qmd_remove_list keeps selection when no replacement is needed", {
 })
 
 test_that("table style wrappers delegate expected template text", {
-  ctx <- list(id = "doc-id")
+  ctx <- fixture_context()
   inserted <- NULL
 
   local_mocked_bindings(

@@ -1,5 +1,5 @@
 test_that("code block wrappers in source mode delegate expected fences", {
-  ctx <- list(id = "doc-id")
+  ctx <- fixture_context()
   call <- NULL
 
   local_mocked_bindings(
@@ -32,7 +32,7 @@ test_that("code block wrappers in source mode delegate expected fences", {
 })
 
 test_that("code block wrappers in visual editor mode call RStudio commands", {
-  ctx <- list(id = "doc-id")
+  ctx <- fixture_context()
   commands <- character()
   set_text <- NULL
 
@@ -64,7 +64,7 @@ test_that("code block wrappers in visual editor mode call RStudio commands", {
 })
 
 test_that("verbatim and split code block warn in visual editor mode", {
-  ctx <- list(id = "doc-id")
+  ctx <- fixture_context()
   warnings <- character()
 
   local_mocked_bindings(
@@ -89,7 +89,7 @@ test_that("verbatim and split code block warn in visual editor mode", {
 })
 
 test_that("heading wrappers route to hash and underline helpers", {
-  ctx <- list(id = "doc-id")
+  ctx <- fixture_context()
   called <- list()
 
   local_mocked_bindings(
@@ -155,7 +155,7 @@ test_that("heading wrappers use visual editor commands when available", {
 })
 
 test_that("heading remove warns in visual editor mode", {
-  ctx <- list(id = "doc-id")
+  ctx <- fixture_context()
   warning_call <- NULL
 
   local_mocked_bindings(
@@ -176,7 +176,7 @@ test_that("heading remove warns in visual editor mode", {
 })
 
 test_that("heading level change computes expected symbols", {
-  ctx <- list(id = "doc-id")
+  ctx <- fixture_context()
   symbols <- character()
 
   local_mocked_bindings(
@@ -195,7 +195,7 @@ test_that("heading level change computes expected symbols", {
 })
 
 test_that("heading level wrappers delegate when not in visual editor", {
-  ctx <- list(id = "doc-id")
+  ctx <- fixture_context()
   directions <- character()
 
   local_mocked_bindings(
@@ -214,7 +214,7 @@ test_that("heading level wrappers delegate when not in visual editor", {
 })
 
 test_that("heading level wrappers return silently in visual editor", {
-  ctx <- list(id = "doc-id")
+  ctx <- fixture_context()
   called <- FALSE
 
   local_mocked_bindings(
@@ -235,7 +235,7 @@ test_that("heading helper internals behave as expected", {
   expect_identical(addins.qmd:::rm_leading_hash("### Title"), "Title")
   expect_identical(addins.qmd:::rm_leading_hash("No hash"), "No hash")
 
-  context <- list(contents = c("Title", "-----", "Body"))
+  context <- fixture_context(contents = c("Title", "-----", "Body"))
   expect_true(addins.qmd:::is_underline_style_heading(1, context))
   expect_false(addins.qmd:::is_underline_style_heading(2, context))
 })
