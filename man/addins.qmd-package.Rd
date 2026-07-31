@@ -11,6 +11,7 @@ Package `addins.qmd` contains RStudio add-ins to format Quarto documents. The ma
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://GegznaV.github.io}
   \item \url{https://gegznav.github.io/addins.qmd/}
   \item Report bugs at \url{https://github.com/GegznaV/addins.qmd/issues}
 }

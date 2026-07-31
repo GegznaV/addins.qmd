@@ -2,7 +2,7 @@
 % Please edit documentation in R/qmd_headings.R
 \name{qmd_headings}
 \alias{qmd_headings}
-\alias{qmd_heading_1}
+\alias{qmd_heading_hash}
 \alias{qmd_heading_2}
 \alias{qmd_heading_3}
 \alias{qmd_heading_4}
@@ -13,7 +13,7 @@
 \alias{qmd_heading_remove}
 \title{Format text as Quarto/Pandoc Markdown headings.}
 \usage{
-qmd_heading_1(context = rs_get_context())
+qmd_heading_hash(symbol, command, context = rs_get_context())
 
 qmd_heading_2(context = rs_get_context())
 
