@@ -5,14 +5,13 @@
 #' @description
 #' RStudio add-in to insert selected lines into code block: \itemize{
 #'    \item `qmd_code_block()` - verbatim code block.
-#'          **Note:** in Markdown Visual Editor mode does not work.
 #'    \item `qmd_code_block_r()` - R code block.
-#'          **Note!** In Markdown Visual Editor (MVE) mode works differently:
-#'          in MVE mode, RStudio IDE command
-#'          [`insertChunk`](https://docs.rstudio.com/ide/server-pro/rstudio_ide_commands/rstudio_ide_commands.html)
+#'          **Note!** In Visual Editor (VE) mode works differently:
+#'          in VE mode, RStudio IDE command
+#'          [`insertChunk`](https://docs.posit.co/ide/server-pro/rstudio_ide_commands/rstudio_ide_commands.html)
 #'          is executed, which currently means that non-selected text will not
 #'          be included in the chunk automatically. If the chunk is included as
-#'          the last line of the document in MVE mode, the selected text is
+#'          the last line of the document in VE mode, the selected text is
 #'          interpreted as chunk options, otherwise as chunk contents.
 #' }
 #' `qmd_code_block_r_split()` - splits block of R code.
