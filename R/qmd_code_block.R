@@ -33,10 +33,8 @@ NULL
 #' @export
 qmd_code_block_r <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    id <- context$id
-    text <- rstudioapi::selectionGet(id = id)$value
-    rstudioapi::executeCommand("insertChunkR", quiet = TRUE)
-    rstudioapi::selectionSet(text, id = id)
+    run_rs_command("insertChunkR", context, preserve_selection = TRUE)
+    return(invisible(NULL))
   } else {
     rs_enclose_selected_rows_with(
       text_above = "```{r}",
@@ -50,10 +48,8 @@ qmd_code_block_r <- function(context = rs_get_context()) {
 #' @export
 qmd_code_block_python <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    id <- context$id
-    text <- rstudioapi::selectionGet(id = id)$value
-    rstudioapi::executeCommand("insertChunkPython", quiet = TRUE)
-    rstudioapi::selectionSet(text, id = id)
+    run_rs_command("insertChunkPython", context, preserve_selection = TRUE)
+    return(invisible(NULL))
   } else {
     rs_enclose_selected_rows_with(
       text_above = "```{python}",
@@ -67,10 +63,8 @@ qmd_code_block_python <- function(context = rs_get_context()) {
 #' @export
 qmd_code_block_sql <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    id <- context$id
-    text <- rstudioapi::selectionGet(id = id)$value
-    rstudioapi::executeCommand("insertChunkSQL", quiet = TRUE)
-    rstudioapi::selectionSet(text, id = id)
+    run_rs_command("insertChunkSQL", context, preserve_selection = TRUE)
+    return(invisible(NULL))
   } else {
     rs_enclose_selected_rows_with(
       text_above = "```{sql}",
@@ -84,11 +78,8 @@ qmd_code_block_sql <- function(context = rs_get_context()) {
 #' @export
 qmd_code_block <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    rstudioapi::sendToConsole(
-      'warning("Addin `qmd_code_block()` does not work in Markdown Visual Editor mode.")',
-      execute = TRUE,
-      focus = FALSE
-    )
+    run_rs_command("insertChunk", context, preserve_selection = TRUE)
+    return(invisible(NULL))
   } else {
     rs_enclose_selected_rows_with(
       text_above = "```",
@@ -102,11 +93,8 @@ qmd_code_block <- function(context = rs_get_context()) {
 #' @export
 qmd_code_block_r_split <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    rstudioapi::sendToConsole(
-      'warning("Addin `qmd_code_block_r_split()` does not work in Markdown Visual Editor mode.")',
-      execute = TRUE,
-      focus = FALSE
-    )
+    run_rs_command("insertChunkR")
+    return(invisible(NULL))
   } else {
     rs_enclose_selected_rows_with(
       text_above = "```\n\n```{r}",
