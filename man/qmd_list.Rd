@@ -45,15 +45,15 @@ Object with context of active RStudio document.}
 RStudio add-ins which format text as Quarto/Pandoc Markdown lists.
 For the first-level lists: \itemize{
 \item \code{qmd_list()} - the main function, that make lists;
-\item \code{qmd_unordered_list()} - unordered list;
-\item \code{qmd_numbered_list()} - numbered list;
-\item \code{qmd_lettered_list()} - lettered list (non-capital English letters);
-\item \code{qmd_master_list()} - master list (which numbering continues throughout the document).
+\item \code{qmd_list_unordered()} - unordered list;
+\item \code{qmd_list_numbered()} - numbered list;
+\item \code{qmd_list_lettered()} - lettered list (non-capital English letters);
+\item \code{qmd_list_z_example_list()} - example list with continuing numbering marker \verb{(@)}.
 }
 }
 \seealso{
 Other Quarto formatting add-ins:
-\code{\link{format_rmd}},
+\code{\link{format_md}},
 \code{\link[=qmd_code_block]{qmd_code_block()}},
 \code{\link{qmd_equations}}
 }

@@ -14,7 +14,7 @@
 \alias{qmd_heading_remove}
 \title{Format text as Quarto/Pandoc Markdown headings.}
 \usage{
-qmd_heading_hash(symbol, command, context = rs_get_context())
+qmd_heading_hash(symbol, context = rs_get_context())
 
 qmd_heading_1(context = rs_get_context())
 
