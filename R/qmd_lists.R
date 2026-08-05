@@ -9,10 +9,10 @@
 #' RStudio add-ins which format text as Quarto/Pandoc Markdown lists.
 #' For the first-level lists: \itemize{
 #'   \item `qmd_list()` - the main function, that make lists;
-#'   \item `qmd_unordered_list()` - unordered list;
-#'   \item `qmd_numbered_list()` - numbered list;
-#'   \item `qmd_lettered_list()` - lettered list (non-capital English letters);
-#'   \item `qmd_master_list()` - master list (which numbering continues throughout the document).
+#'   \item `qmd_list_unordered()` - unordered list;
+#'   \item `qmd_list_numbered()` - numbered list;
+#'   \item `qmd_list_lettered()` - lettered list (non-capital English letters);
+#'   \item `qmd_list_z_example_list()` - example list with continuing numbering marker `(@)`.
 #'   }
 #'
 #' @param type (character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master", or list like elements "block quotes" and "line blocks".
@@ -27,13 +27,13 @@ qmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
   if (is_visual_editor()) {
     if (level == 1) {
       if (type %in% c("1", "ordered", "numbered", "numbers")) {
-        if (run_visual_editor_command("markdownOrderedList")) {
+        if (run_rs_command("markdownOrderedList")) {
           return(invisible(NULL))
         }
       }
 
       if (type %in% c("+", "-", "*", "unordered")) {
-        if (run_visual_editor_command("markdownBulletList")) {
+        if (run_rs_command("markdownBulletList")) {
           return(invisible(NULL))
         }
       }
@@ -42,8 +42,8 @@ qmd_list <- function(type = "unordered", level = 1, context = rs_get_context()) 
     rstudioapi::sendToConsole(
       'warning(
         "List-related package `addins.qmd` addins do not work in ",
-        "Markdown Visual Editor (VME) mode. \n",
-        "Use related VME functionality instead."
+        "Visual Editor (VE) mode. \n",
+        "Use related VE functionality instead."
       )',
       execute = TRUE,
       focus = FALSE
