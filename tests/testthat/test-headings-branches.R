@@ -100,7 +100,7 @@ test_that("add_underline_style_heading warns in visual editor mode", {
   )
 
   expect_null(addins.qmd:::add_underline_style_heading("="))
-  expect_true(grepl("does not work in Markdown Visual Editor", warning_call))
+  expect_true(grepl("does not work in Visual Editor", warning_call))
 })
 
 test_that("qmd_heading_level_change handles upper/lower bounds", {

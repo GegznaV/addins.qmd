@@ -33,59 +33,62 @@ test_that("code block wrappers in source mode delegate expected fences", {
 
 test_that("code block wrappers in visual editor mode call RStudio commands", {
   ctx <- fixture_context()
-  commands <- character()
-  set_text <- NULL
+  calls <- list()
 
   local_mocked_bindings(
     is_visual_editor = function() TRUE,
+    run_rs_command = function(command, context = NULL, preserve_selection = FALSE) {
+      calls[[length(calls) + 1]] <<- list(
+        command = command,
+        context = context,
+        preserve_selection = preserve_selection
+      )
+      TRUE
+    },
     .package = "addins.qmd"
-  )
-
-  local_mocked_bindings(
-    selectionGet = function(id) list(value = "a <- 1"),
-    executeCommand = function(command, quiet = TRUE) {
-      commands <<- c(commands, command)
-      invisible(NULL)
-    },
-    selectionSet = function(value, id) {
-      set_text <<- list(value = value, id = id)
-      invisible(NULL)
-    },
-    .package = "rstudioapi"
   )
 
   qmd_code_block_r(context = ctx)
   qmd_code_block_python(context = ctx)
   qmd_code_block_sql(context = ctx)
 
-  expect_identical(commands, c("insertChunkR", "insertChunkPython", "insertChunkSQL"))
-  expect_identical(set_text$value, "a <- 1")
-  expect_identical(set_text$id, "doc-id")
+  expect_identical(vapply(calls, `[[`, character(1), "command"), c("insertChunkR", "insertChunkPython", "insertChunkSQL"))
+  expect_true(all(vapply(calls, `[[`, logical(1), "preserve_selection")))
+  expect_true(all(vapply(calls, function(call) identical(call$context, ctx), logical(1))))
 })
 
-test_that("verbatim and split code block warn in visual editor mode", {
+test_that("verbatim and split code block use visual editor commands when available", {
   ctx <- fixture_context()
-  warnings <- character()
+  commands <- character()
 
   local_mocked_bindings(
     is_visual_editor = function() TRUE,
-    .package = "addins.qmd"
-  )
-
-  local_mocked_bindings(
-    sendToConsole = function(code, execute, focus) {
-      warnings <<- c(warnings, code)
-      invisible(NULL)
+    run_rs_command = function(command, context = NULL, preserve_selection = FALSE) {
+      commands <<- c(commands, command)
+      TRUE
     },
-    .package = "rstudioapi"
+    .package = "addins.qmd"
   )
 
   qmd_code_block(context = ctx)
   qmd_code_block_r_split(context = ctx)
 
-  expect_equal(length(warnings), 2)
-  expect_true(any(grepl("qmd_code_block\\(\\)", warnings)))
-  expect_true(any(grepl("qmd_code_block_r_split\\(\\)", warnings)))
+  expect_identical(commands, c("insertChunk", "insertChunkR"))
+})
+
+test_that("verbatim and split code block return silently when visual editor commands are unavailable", {
+  ctx <- fixture_context()
+
+  local_mocked_bindings(
+    is_visual_editor = function() TRUE,
+    run_rs_command = function(command, context = NULL, preserve_selection = FALSE) {
+      FALSE
+    },
+    .package = "addins.qmd"
+  )
+
+  expect_null(qmd_code_block(context = ctx))
+  expect_null(qmd_code_block_r_split(context = ctx))
 })
 
 test_that("heading wrappers route to hash and underline helpers", {
@@ -119,17 +122,14 @@ test_that("heading wrappers route to hash and underline helpers", {
   expect_true(all(vapply(called, function(x) identical(x$context, ctx), logical(1))))
 })
 
-test_that("heading wrappers use visual editor commands when available", {
-  commands <- character()
+test_that("heading wrappers return silently in visual editor mode", {
+  called <- FALSE
 
   local_mocked_bindings(
     is_visual_editor = function() TRUE,
-    run_visual_editor_command = function(command) {
-      commands <<- c(commands, command)
-      TRUE
-    },
     add_hash_style_heading = function(symbol, context) {
-      fail("source-mode heading helper should not be called in visual editor mode")
+      called <<- TRUE
+      invisible(NULL)
     },
     .package = "addins.qmd"
   )
@@ -141,17 +141,7 @@ test_that("heading wrappers use visual editor commands when available", {
   qmd_heading_5()
   qmd_heading_6()
 
-  expect_identical(
-    commands,
-    c(
-      "markdownHeader1",
-      "markdownHeader2",
-      "markdownHeader3",
-      "markdownHeader4",
-      "markdownHeader5",
-      "markdownHeader6"
-    )
-  )
+  expect_false(called)
 })
 
 test_that("heading remove warns in visual editor mode", {
@@ -172,7 +162,7 @@ test_that("heading remove warns in visual editor mode", {
   )
 
   expect_null(qmd_heading_remove(context = ctx))
-  expect_true(grepl("does not work in Markdown Visual Editor", warning_call))
+  expect_true(grepl("does not work in Visual Editor", warning_call))
 })
 
 test_that("heading level change computes expected symbols", {

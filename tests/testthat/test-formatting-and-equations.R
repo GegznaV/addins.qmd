@@ -20,8 +20,8 @@ test_that("formatting wrappers call enclose helper with expected symbols", {
     qmd_format_superscript = list(symbol = "^"),
     qmd_format_subscript = list(symbol = "~"),
     qmd_format_strikethrough = list(symbol = "~~"),
-    qmd_equation_a_inline = list(symbol = "$"),
-    qmd_equation_b_block = list(symbol = "$$")
+    qmd_equation_inline = list(symbol = "$"),
+    qmd_equation_block = list(symbol = "$$")
   )
 
   for (fn in names(cases)) {
@@ -49,7 +49,7 @@ test_that("formatting wrappers with asymmetric symbols use expected text", {
   expect_identical(call$symbol_before, "**_")
   expect_identical(call$symbol_after, "_**")
 
-  get("qmd_format_html_comment", envir = asNamespace("addins.qmd"))(context = ctx)
+  get("qmd_html_comment", envir = asNamespace("addins.qmd"))(context = ctx)
   expect_identical(call$symbol_before, "<!--")
   expect_identical(call$symbol_after, "-->")
 
@@ -73,7 +73,7 @@ test_that("formatting wrappers with asymmetric symbols use expected text", {
   expect_identical(call$symbol_before, "![")
   expect_identical(call$symbol_after, "](path_to_figure)")
 
-  get("qmd_equation_b_block2", envir = asNamespace("addins.qmd"))(context = ctx)
+  get("qmd_equation_block2", envir = asNamespace("addins.qmd"))(context = ctx)
   expect_identical(call$symbol_before, "\\[")
   expect_identical(call$symbol_after, "\\]")
 })
@@ -85,7 +85,7 @@ test_that("visual editor command path is used for supported wrappers", {
 
   local_mocked_bindings(
     is_visual_editor = function() TRUE,
-    run_visual_editor_command = function(command) {
+    run_rs_command = function(command, context = NULL, preserve_selection = FALSE) {
       commands <<- c(commands, command)
       TRUE
     },
@@ -130,7 +130,7 @@ test_that("visual editor command path falls back when command is unavailable", {
 
   local_mocked_bindings(
     is_visual_editor = function() TRUE,
-    run_visual_editor_command = function(command) FALSE,
+    run_rs_command = function(command, context = NULL, preserve_selection = FALSE) FALSE,
     rs_enclose_selection_with = function(...) {
       call <<- list(...)
       invisible(NULL)

@@ -1,4 +1,4 @@
-test_that("run_visual_editor_command returns TRUE when command succeeds", {
+test_that("run_rs_command returns TRUE when command succeeds", {
   local_mocked_bindings(
     executeCommand = function(command, quiet = TRUE) {
       expect_identical(command, "markdownBold")
@@ -8,10 +8,10 @@ test_that("run_visual_editor_command returns TRUE when command succeeds", {
     .package = "rstudioapi"
   )
 
-  expect_true(addins.qmd:::run_visual_editor_command("markdownBold"))
+  expect_true(addins.qmd:::run_rs_command("markdownBold"))
 })
 
-test_that("run_visual_editor_command returns FALSE on command error", {
+test_that("run_rs_command returns FALSE on command error", {
   local_mocked_bindings(
     executeCommand = function(command, quiet = TRUE) {
       stop("command not available")
@@ -19,5 +19,5 @@ test_that("run_visual_editor_command returns FALSE on command error", {
     .package = "rstudioapi"
   )
 
-  expect_false(addins.qmd:::run_visual_editor_command("doesNotExist"))
+  expect_false(addins.qmd:::run_rs_command("doesNotExist"))
 })
