@@ -25,11 +25,8 @@
 #'
 #' @name qmd_headings
 #' @keywords internal
-qmd_heading_hash <- function(symbol, command, context = rs_get_context()) {
+qmd_heading_hash <- function(symbol, context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command(command)) {
-      return(invisible(NULL))
-    }
     return(invisible(NULL))
   }
 
@@ -39,38 +36,38 @@ qmd_heading_hash <- function(symbol, command, context = rs_get_context()) {
 #' @rdname qmd_headings
 #' @export
 qmd_heading_1 <- function(context = rs_get_context()) {
-  qmd_heading_hash(symbol = "# ", command = "markdownHeader1", context = context)
+  qmd_heading_hash(symbol = "# ", context = context)
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
 #' @export
 qmd_heading_2 <- function(context = rs_get_context()) {
-  qmd_heading_hash(symbol = "## ", command = "markdownHeader2", context = context)
+  qmd_heading_hash(symbol = "## ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
 #' @export
 qmd_heading_3 <- function(context = rs_get_context()) {
-  qmd_heading_hash(symbol = "### ", command = "markdownHeader3", context = context)
+  qmd_heading_hash(symbol = "### ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
 #' @export
 qmd_heading_4 <- function(context = rs_get_context()) {
-  qmd_heading_hash(symbol = "#### ", command = "markdownHeader4", context = context)
+  qmd_heading_hash(symbol = "#### ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
 #' @export
 qmd_heading_5 <- function(context = rs_get_context()) {
-  qmd_heading_hash(symbol = "##### ", command = "markdownHeader5", context = context)
+  qmd_heading_hash(symbol = "##### ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
 #' @export
 qmd_heading_6 <- function(context = rs_get_context()) {
-  qmd_heading_hash(symbol = "###### ", command = "markdownHeader6", context = context)
+  qmd_heading_hash(symbol = "###### ", context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_headings
@@ -93,7 +90,7 @@ qmd_heading_remove <- function(style = c("auto", "both", "hash", "underline"),
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   if (is_visual_editor()) {
     rstudioapi::sendToConsole(
-      'warning("This addin does not work in Markdown Visual Editor (VME) mode. ")',
+      'warning("Addin qmd_heading_remove() does not work in Visual Editor mode. ")',
       execute = TRUE,
       focus = FALSE
     )
@@ -135,7 +132,7 @@ add_underline_style_heading <- function(symbol = "=", context = rs_get_context()
   # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   if (is_visual_editor()) {
     rstudioapi::sendToConsole(
-      'warning("This addin does not work in Markdown Visual Editor (VME) mode. ")',
+      'warning("Addin add_underline_style_heading() does not work in Visual Editor mode. ")',
       execute = TRUE,
       focus = FALSE
     )
@@ -185,6 +182,7 @@ add_hash_style_heading <- function(symbol = "# ", context = rs_get_context()) {
       context = context
     )
   }
+
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rm_leading_hash <- function(str) {
