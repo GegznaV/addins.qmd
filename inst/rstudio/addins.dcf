@@ -42,7 +42,7 @@ Interactive: false
 
 Name: {qmd} HTML comment (<!-- -->)
 Description: Enclose selected text with <!-- and -->.
-Binding: qmd_format_html_comment
+Binding: qmd_html_comment
 Interactive: false
 
 
@@ -111,17 +111,17 @@ Interactive: false
 
 Name: {qmd} LaTeX equation: inline ($ $)
 Description: Enclose selected text with `$`.
-Binding: qmd_equation_a_inline
+Binding: qmd_equation_inline
 Interactive: false
 
 Name: {qmd} LaTeX equation: block ($$ $$)
 Description: Enclose selected text with `$$`.
-Binding: qmd_equation_b_block
+Binding: qmd_equation_block
 Interactive: false
 
 Name: {qmd} LaTeX equation: block (\[   \])
 Description: Enclose selected text with `\[` and `\]`.
-Binding: qmd_equation_b_block2
+Binding: qmd_equation_block2
 Interactive: false
 
 
