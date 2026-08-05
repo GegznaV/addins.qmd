@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 [![GitHub version](https://img.shields.io/badge/GitHub-`r read.dcf('DESCRIPTION')[1, 'Version']`-brightgreen.svg)](https://github.com/GegznaV/addins.qmd)
 [![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
 [![Codecov test coverage](https://codecov.io/gh/GegznaV/addins.qmd/graph/badge.svg)](https://app.codecov.io/gh/GegznaV/addins.qmd)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](https://github.com/GegznaV/addins.qmd/commits/master)
 <!-- badges: end -->
 
 ***
@@ -126,7 +126,7 @@ knitr::include_graphics("https://gegznav.github.io/addins.qmd/figs/demo-chunk-ad
 
 This package is Quarto-first. Most add-ins produce syntax that works in Quarto documents and is powered by Pandoc Markdown.
 
-Some add-ins have limited behavior in RStudio Markdown Visual Editor mode. When this happens, use Source editor mode or the related native Visual Editor command.
+Some add-ins have limited behavior in RStudio markdown Visual Editor mode. When this happens, use Source editor mode or the related native Visual Editor command.
 
 ## API Surface Conventions
 
