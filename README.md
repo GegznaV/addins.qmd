@@ -12,7 +12,7 @@ version](https://img.shields.io/badge/GitHub-0.0.1-brightgreen.svg)](https://git
 [![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/GegznaV/addins.qmd/graph/badge.svg)](https://app.codecov.io/gh/GegznaV/addins.qmd)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2026--08--05-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2026--08--07-yellowgreen.svg)](https://github.com/GegznaV/addins.qmd/commits/master)
 <!-- badges: end -->
 
 ------------------------------------------------------------------------
