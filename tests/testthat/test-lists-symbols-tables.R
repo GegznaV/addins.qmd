@@ -28,7 +28,7 @@ test_that("qmd_list uses ordered-list command in visual editor mode", {
 
   local_mocked_bindings(
     is_visual_editor = function() TRUE,
-    run_visual_editor_command = function(command) {
+    run_rs_command = function(command) {
       expect_identical(command, "markdownOrderedList")
       TRUE
     },
@@ -52,7 +52,7 @@ test_that("qmd_list warns when visual editor command is unavailable", {
 
   local_mocked_bindings(
     is_visual_editor = function() TRUE,
-    run_visual_editor_command = function(command) FALSE,
+    run_rs_command = function(command) FALSE,
     .package = "addins.qmd"
   )
 

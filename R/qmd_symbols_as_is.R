@@ -10,7 +10,7 @@
 #' @seealso
 #' https://pandoc.org/MANUAL.html#backslash-escapes
 #'
-#' @name format_rmd
+#' @name format_md
 #'
 #' @inheritParams addin.tools::rs_get_index
 #'
@@ -18,40 +18,40 @@
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_symbol_asterisk <- function(context = rs_get_context()) {
   rs_insert_text(text = "\\*", context = context, spaces = FALSE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_symbol_backslash <- function(context = rs_get_context()) {
   rs_insert_text(text = "\\\\", context = context, spaces = FALSE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_symbol_underscore <- function(context = rs_get_context()) {
   rs_insert_text(text = "\\_", context = context, spaces = FALSE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_symbol_dollar <- function(context = rs_get_context()) {
   rs_insert_text(text = "\\$", context = context, spaces = FALSE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_symbol_en_dash <- function(context = rs_get_context()) {
   rs_insert_text(text = "--", context = context, spaces = FALSE)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_symbol_em_dash <- function(context = rs_get_context()) {
   rs_insert_text(text = "---", context = context, spaces = FALSE)

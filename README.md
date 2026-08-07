@@ -12,7 +12,7 @@ version](https://img.shields.io/badge/GitHub-0.0.1-brightgreen.svg)](https://git
 [![R-CMD-check](https://github.com/GegznaV/addins.qmd/workflows/R-CMD-check/badge.svg)](https://github.com/GegznaV/addins.qmd/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/GegznaV/addins.qmd/graph/badge.svg)](https://app.codecov.io/gh/GegznaV/addins.qmd)
-[![Updated-on](https://img.shields.io/badge/Updated%20on-2026--07--31-yellowgreen.svg)](/commits/master)
+[![Updated-on](https://img.shields.io/badge/Updated%20on-2026--08--05-yellowgreen.svg)](/commits/master)
 <!-- badges: end -->
 
 ------------------------------------------------------------------------
@@ -155,7 +155,7 @@ chunk.
 This package is Quarto-first. Most add-ins produce syntax that works in
 Quarto documents and is powered by Pandoc Markdown.
 
-Some add-ins have limited behavior in RStudio Markdown Visual Editor
+Some add-ins have limited behavior in RStudio markdown Visual Editor
 mode. When this happens, use Source editor mode or the related native
 Visual Editor command.
 

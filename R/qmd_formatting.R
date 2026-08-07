@@ -23,29 +23,17 @@
 #'
 #' @inheritParams addin.tools::rs_get_index
 #'
-#' @name format_rmd
+#' @name format_md
 #' @family Quarto formatting add-ins
 #'
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Command-based formatting in Visual Editor mode.
-run_visual_editor_command <- function(command) {
-  tryCatch(
-    {
-      rstudioapi::executeCommand(command, quiet = TRUE)
-      TRUE
-    },
-    error = function(...) FALSE
-  )
-}
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_format_bold <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownBold")) {
+    if (run_rs_command("markdownBold")) {
       return(invisible(NULL))
     }
   }
@@ -56,11 +44,11 @@ qmd_format_bold <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_format_italics <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownItalic")) {
+    if (run_rs_command("markdownItalic")) {
       return(invisible(NULL))
     }
   }
@@ -71,12 +59,11 @@ qmd_format_italics <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_format_bold_italics <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownBold") &&
-      run_visual_editor_command("markdownItalic")) {
+    if (run_rs_command("markdownBold") && run_rs_command("markdownItalic")) {
       return(invisible(NULL))
     }
   }
@@ -87,11 +74,11 @@ qmd_format_bold_italics <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_format_bold2 <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownBold")) {
+    if (run_rs_command("markdownBold")) {
       return(invisible(NULL))
     }
   }
@@ -102,11 +89,11 @@ qmd_format_bold2 <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_format_italics2 <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownItalic")) {
+    if (run_rs_command("markdownItalic")) {
       return(invisible(NULL))
     }
   }
@@ -117,20 +104,20 @@ qmd_format_italics2 <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
-qmd_format_html_comment <- function(context = rs_get_context()) {
+qmd_html_comment <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
     symbol_before = "<!--", symbol_after = "-->",
     context = context
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_code_inline <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownCode")) {
+    if (run_rs_command("markdownCode")) {
       return(invisible(NULL))
     }
   }
@@ -141,7 +128,7 @@ qmd_code_inline <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_code_inline_r <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
@@ -150,7 +137,7 @@ qmd_code_inline_r <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_code_inline_highlighted_as_r <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
@@ -159,7 +146,7 @@ qmd_code_inline_highlighted_as_r <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_format_superscript <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
@@ -168,7 +155,7 @@ qmd_format_superscript <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_format_subscript <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
@@ -177,11 +164,11 @@ qmd_format_subscript <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_format_strikethrough <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownStrikethrough")) {
+    if (run_rs_command("markdownStrikethrough")) {
       return(invisible(NULL))
     }
   }
@@ -192,11 +179,11 @@ qmd_format_strikethrough <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_format_footnote <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownFootnote")) {
+    if (run_rs_command("markdownFootnote")) {
       return(invisible(NULL))
     }
   }
@@ -207,7 +194,7 @@ qmd_format_footnote <- function(context = rs_get_context()) {
   )
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_horizontal_rule <- function(context = rs_get_context()) {
   # Style ***
@@ -232,11 +219,11 @@ pattern_url <- "(https?://(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\
 
 pattern_url_2 <- "^(((http(s)?|(ftp(s)?))://)(www\\.)?([a-zA-Z0-9][a-zA-Z0-9\\.\\/-]+[a-zA-Z0-9]\\.[^\\s]{2,})+(\\:[0-9]{5})?|(mailto:){1}([\\w\\.]+)\\@{1}[\\w]+\\.[\\w]{2,})\\s$"
 
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_link_url <- function(context = rs_get_context()) {
   if (is_visual_editor()) {
-    if (run_visual_editor_command("markdownLink")) {
+    if (run_rs_command("markdownLink")) {
       return(invisible(NULL))
     }
   }
@@ -251,7 +238,7 @@ qmd_link_url <- function(context = rs_get_context()) {
 #       2. Fix cursor position similarly as in `qmd_insert_figure_r_code_block`.
 #       3. Create interactive add-in.
 #
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_insert_figure <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
@@ -260,7 +247,7 @@ qmd_insert_figure <- function(context = rs_get_context()) {
   )
 }
 
-#' @rdname format_rmd
+#' @rdname format_md
 #' @export
 qmd_insert_figure_r_code_block <- function(context = rs_get_context()) {
   # Generate figure ID

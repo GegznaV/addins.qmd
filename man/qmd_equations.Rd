@@ -2,16 +2,16 @@
 % Please edit documentation in R/qmd_equations.R
 \name{qmd_equations}
 \alias{qmd_equations}
-\alias{qmd_equation_a_inline}
-\alias{qmd_equation_b_block}
-\alias{qmd_equation_b_block2}
+\alias{qmd_equation_inline}
+\alias{qmd_equation_block}
+\alias{qmd_equation_block2}
 \title{Format as LaTeX equation.}
 \usage{
-qmd_equation_a_inline(context = rs_get_context())
+qmd_equation_inline(context = rs_get_context())
 
-qmd_equation_b_block(context = rs_get_context())
+qmd_equation_block(context = rs_get_context())
 
-qmd_equation_b_block2(context = rs_get_context())
+qmd_equation_block2(context = rs_get_context())
 }
 \arguments{
 \item{context}{(class \code{document_context}) \cr
@@ -25,7 +25,7 @@ as a block equation in Quarto/Pandoc Markdown.
 }
 \seealso{
 Other Quarto formatting add-ins:
-\code{\link{format_rmd}},
+\code{\link{format_md}},
 \code{\link[=qmd_code_block]{qmd_code_block()}},
 \code{\link[=qmd_list]{qmd_list()}}
 }

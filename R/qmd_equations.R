@@ -18,7 +18,7 @@ NULL
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_equations
 #' @export
-qmd_equation_a_inline <- function(context = rs_get_context()) {
+qmd_equation_inline <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
     symbol = "$",
     context = context
@@ -27,7 +27,7 @@ qmd_equation_a_inline <- function(context = rs_get_context()) {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_equations
 #' @export
-qmd_equation_b_block <- function(context = rs_get_context()) {
+qmd_equation_block <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
     symbol = "$$",
     context = context
@@ -36,7 +36,7 @@ qmd_equation_b_block <- function(context = rs_get_context()) {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname qmd_equations
 #' @export
-qmd_equation_b_block2 <- function(context = rs_get_context()) {
+qmd_equation_block2 <- function(context = rs_get_context()) {
   rs_enclose_selection_with(
     symbol_before = "\\[", symbol_after = "\\]",
     context = context
