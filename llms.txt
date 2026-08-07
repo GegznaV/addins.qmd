@@ -106,7 +106,7 @@ chunk.
 This package is Quarto-first. Most add-ins produce syntax that works in
 Quarto documents and is powered by Pandoc Markdown.
 
-Some add-ins have limited behavior in RStudio Markdown Visual Editor
+Some add-ins have limited behavior in RStudio markdown Visual Editor
 mode. When this happens, use Source editor mode or the related native
 Visual Editor command.
 
@@ -148,29 +148,29 @@ Online documentation at <https://gegznav.github.io/addins.qmd/>
 
 ## All functions
 
-- [`qmd_format_bold()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_format_italics()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_format_bold_italics()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_format_bold2()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_format_italics2()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_format_html_comment()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_code_inline()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_code_inline_r()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_code_inline_highlighted_as_r()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_format_superscript()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_format_subscript()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_format_strikethrough()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_format_footnote()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_horizontal_rule()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_link_url()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_insert_figure()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_insert_figure_r_code_block()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_symbol_asterisk()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_symbol_backslash()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_symbol_underscore()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_symbol_dollar()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_symbol_en_dash()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
-  [`qmd_symbol_em_dash()`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md)
+- [`qmd_format_bold()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_format_italics()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_format_bold_italics()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_format_bold2()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_format_italics2()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_html_comment()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_code_inline()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_code_inline_r()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_code_inline_highlighted_as_r()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_format_superscript()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_format_subscript()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_format_strikethrough()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_format_footnote()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_horizontal_rule()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_link_url()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_insert_figure()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_insert_figure_r_code_block()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_symbol_asterisk()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_symbol_backslash()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_symbol_underscore()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_symbol_dollar()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_symbol_en_dash()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
+  [`qmd_symbol_em_dash()`](https://gegznav.github.io/addins.qmd/reference/format_md.md)
   : Add-ins for basic Quarto/Pandoc Markdown formatting.
 - [`qmd_code_block_r()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md)
   [`qmd_code_block_python()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md)
@@ -178,9 +178,9 @@ Online documentation at <https://gegznav.github.io/addins.qmd/>
   [`qmd_code_block()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md)
   [`qmd_code_block_r_split()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md)
   : Convert rows into the block of code.
-- [`qmd_equation_a_inline()`](https://gegznav.github.io/addins.qmd/reference/qmd_equations.md)
-  [`qmd_equation_b_block()`](https://gegznav.github.io/addins.qmd/reference/qmd_equations.md)
-  [`qmd_equation_b_block2()`](https://gegznav.github.io/addins.qmd/reference/qmd_equations.md)
+- [`qmd_equation_inline()`](https://gegznav.github.io/addins.qmd/reference/qmd_equations.md)
+  [`qmd_equation_block()`](https://gegznav.github.io/addins.qmd/reference/qmd_equations.md)
+  [`qmd_equation_block2()`](https://gegznav.github.io/addins.qmd/reference/qmd_equations.md)
   : Format as LaTeX equation.
 - [`qmd_list()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
   [`qmd_block_quotes()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)

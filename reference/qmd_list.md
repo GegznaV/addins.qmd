@@ -5,14 +5,14 @@ the first-level lists:
 
 - `qmd_list()` - the main function, that make lists;
 
-- `qmd_unordered_list()` - unordered list;
+- `qmd_list_unordered()` - unordered list;
 
-- `qmd_numbered_list()` - numbered list;
+- `qmd_list_numbered()` - numbered list;
 
-- `qmd_lettered_list()` - lettered list (non-capital English letters);
+- `qmd_list_lettered()` - lettered list (non-capital English letters);
 
-- `qmd_master_list()` - master list (which numbering continues
-  throughout the document).
+- `qmd_list_z_example_list()` - example list with continuing numbering
+  marker `(@)`.
 
 ## Usage
 
@@ -58,6 +58,6 @@ qmd_list_z_example_list()
 ## See also
 
 Other Quarto formatting add-ins:
-[`format_rmd`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md),
+[`format_md`](https://gegznav.github.io/addins.qmd/reference/format_md.md),
 [`qmd_code_block()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md),
 [`qmd_equations`](https://gegznav.github.io/addins.qmd/reference/qmd_equations.md)

@@ -106,7 +106,7 @@ chunk.
 This package is Quarto-first. Most add-ins produce syntax that works in
 Quarto documents and is powered by Pandoc Markdown.
 
-Some add-ins have limited behavior in RStudio Markdown Visual Editor
+Some add-ins have limited behavior in RStudio markdown Visual Editor
 mode. When this happens, use Source editor mode or the related native
 Visual Editor command.
 

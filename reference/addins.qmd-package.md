@@ -17,9 +17,10 @@ Useful links:
 
 ## Author
 
-**Maintainer**: Vilmantas Gegzna <GegznaV@gmail.com> \[copyright
-holder\]
+**Maintainer**: Vilmantas Gegzna <GegznaV@gmail.com>
+([ORCID](https://orcid.org/0000-0002-9500-5167)) \[copyright holder\]
 
 Authors:
 
-- Vilmantas Gegzna <GegznaV@gmail.com> \[copyright holder\]
+- Vilmantas Gegzna <GegznaV@gmail.com>
+  ([ORCID](https://orcid.org/0000-0002-9500-5167)) \[copyright holder\]

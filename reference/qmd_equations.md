@@ -8,11 +8,11 @@ block equation in Quarto/Pandoc Markdown.
 ## Usage
 
 ``` r
-qmd_equation_a_inline(context = rs_get_context())
+qmd_equation_inline(context = rs_get_context())
 
-qmd_equation_b_block(context = rs_get_context())
+qmd_equation_block(context = rs_get_context())
 
-qmd_equation_b_block2(context = rs_get_context())
+qmd_equation_block2(context = rs_get_context())
 ```
 
 ## Arguments
@@ -25,6 +25,6 @@ qmd_equation_b_block2(context = rs_get_context())
 ## See also
 
 Other Quarto formatting add-ins:
-[`format_rmd`](https://gegznav.github.io/addins.qmd/reference/format_rmd.md),
+[`format_md`](https://gegznav.github.io/addins.qmd/reference/format_md.md),
 [`qmd_code_block()`](https://gegznav.github.io/addins.qmd/reference/qmd_code_block.md),
 [`qmd_list()`](https://gegznav.github.io/addins.qmd/reference/qmd_list.md)
